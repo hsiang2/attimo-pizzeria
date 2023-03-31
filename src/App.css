@@ -1,6 +1,7 @@
 /* General Styles */
 /* RWD Container */
 .container {
+  /* background-color: blue; */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -38,6 +39,7 @@
 
 /* body */
 body {
+  /* background-image: url(); */
   font-size: 16px;
   line-height: 1.6;
 }
@@ -57,6 +59,7 @@ body {
 }
 
 .layoutHeader {
+  position: fixed;
   grid-area: header;
   padding: 0;
   height: auto;

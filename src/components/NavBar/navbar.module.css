@@ -1,0 +1,15 @@
+.navBar {
+    display: none;
+}
+
+.navItem {
+    margin-left: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .navBar {
+        display: flex;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+}

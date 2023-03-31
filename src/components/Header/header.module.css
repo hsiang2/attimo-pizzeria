@@ -1,0 +1,92 @@
+.nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.halfNav {
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+}
+
+.navLayout {
+  /* position: fixed; */
+  padding-top: 2rem;
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+  /* background-color: antiquewhite; */
+  display: grid;
+  grid-template-areas:
+    "switch"
+    "nav";
+}
+
+.switch {
+  grid-area: switch;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media (min-width: 576px) {
+  .navLayout {
+    padding-top: 2.5rem;
+    
+    grid-template-areas:
+      "nav switch";
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    margin-left: 0;
+  margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navLayout {
+  
+    gap: 4.25rem;
+  }
+    .showMobile {
+      display: none;
+    }
+
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 1.75rem;
+}
+
+/* .mainLayout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  gap: 1em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.layoutHeader {
+  grid-area: header;
+  padding: 0;
+  height: auto;
+  line-height: 1.6;
+}
+
+.layoutFooter {
+  grid-area: footer;
+  padding: 0;
+  height: auto;
+  line-height: 1.6;
+}
+
+.layoutContent {
+  grid-area: content;
+} */
