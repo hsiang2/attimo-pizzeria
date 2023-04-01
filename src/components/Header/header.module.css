@@ -28,9 +28,14 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  margin-bottom: 1.5rem;
 }
 
-@media (min-width: 576px) {
+.logoSize {
+  width: 3rem;
+}
+
+@media (min-width: 768px) {
   .navLayout {
     padding-top: 2.5rem;
     
@@ -41,16 +46,24 @@
     margin-left: 0;
   margin-right: 0;
   }
+
+  .logoSize {
+    width: 3.875rem;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navLayout {
   
     gap: 4.25rem;
   }
-    .showMobile {
-      display: none;
-    }
+  .showMobile {
+    display: none;
+  }
+
+  .logoSize {
+    width: 4rem;
+  }
 
 }
 

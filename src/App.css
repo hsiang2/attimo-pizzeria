@@ -77,6 +77,13 @@ body {
   grid-area: content;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 
 /* #root {
   max-width: 1280px;

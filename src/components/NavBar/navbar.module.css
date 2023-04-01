@@ -6,7 +6,7 @@
     margin-left: 3.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .navBar {
         display: flex;
         align-items: center;

@@ -19,7 +19,7 @@ const Header = () => {
                     />
                     <div className={styles.halfNav}>
                         <Link to="/">
-                            <img src="img_logo.png" alt="logo"/>
+                            <img src="img_logo.png" alt="logo" className={styles.logoSize}/>
                         </Link>
                         <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                     </div>
