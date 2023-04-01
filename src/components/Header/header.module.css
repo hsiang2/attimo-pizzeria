@@ -14,6 +14,7 @@
 .navLayout {
   /* position: fixed; */
   padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-left: 2.25rem;
   margin-right: 2.25rem;
   /* background-color: antiquewhite; */
@@ -38,7 +39,7 @@
 @media (min-width: 768px) {
   .navLayout {
     padding-top: 2.5rem;
-    
+    padding-bottom: 2.5rem;
     grid-template-areas:
       "nav switch";
     grid-template-columns: 1fr auto;
@@ -49,6 +50,9 @@
 
   .logoSize {
     width: 3.875rem;
+  }
+  .switch {
+    margin-bottom: 0rem;
   }
 }
 

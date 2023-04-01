@@ -37,6 +37,13 @@
   }
 }
 
+.fullWidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
 /* body */
 body {
   /* background-image: url(); */
@@ -53,7 +60,7 @@ body {
     "content"
     "footer";
   grid-template-rows: auto 1fr auto;
-  gap: 1em;
+  /* gap: 1em; */
   margin-bottom: 0;
   padding-bottom: 0;
 }

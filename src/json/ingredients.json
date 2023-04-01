@@ -1,0 +1,58 @@
+[
+    {
+        "name": "olive",
+        "image": "olive.png"
+    },
+    {
+        "name": "basil",
+        "image": "basil.png"
+    },
+    {
+        "name": "cheese",
+        "image": "cheese.png"
+    },
+    {
+        "name": "tomato",
+        "image": "tomato.png"
+    },
+    {
+        "name": "mushroom",
+        "image": "mushroom.png"
+    },
+    {
+        "name": "shellfish",
+        "image": "shellfish.png"
+    },
+    {
+        "name": "bell pepper",
+        "image": "bell-pepper.png"
+    },
+    {
+        "name": "garlic",
+        "image": "garlic.png"
+    },
+    {
+        "name": "pineapple",
+        "image": "pineapple.png"
+    },
+    {
+        "name": "onion",
+        "image": "onion.png"
+    },
+    {
+        "name": "sausage",
+        "image": "sausage.png"
+    },
+    {
+        "name": "anchovy",
+        "image": "anchovy.png"
+    },
+    {
+        "name": "avocado",
+        "image": "avocado.png"
+    },
+    {
+        "name": "corn",
+        "image": "corn.png"
+    }
+]
