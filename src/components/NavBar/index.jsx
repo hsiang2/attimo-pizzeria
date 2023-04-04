@@ -1,14 +1,14 @@
 import { Drawer } from "antd"
 import styles from './navbar.module.css'
-import NavLink from "../NavLink"
+import { Link } from "react-router-dom"
 
 const NavBar = ({ open, onClose }) => {
     const NavBarContent = () => (
         <>
-            <NavLink to="menu" className={styles.navItem}>MENU</NavLink>
-            <NavLink to="contact" className={styles.navItem}>CONTACT</NavLink>
-            <NavLink to="ourstory" className={styles.navItem}>OUR STORY</NavLink>
-            <NavLink to="findus" className={styles.navItem}>FIND US</NavLink>
+            <Link to="/menu/category/pizzas" className={styles.navItem}>MENU</Link>
+            <Link to="/contact" className={styles.navItem}>CONTACT</Link>
+            <Link to="/ourstory" className={styles.navItem}>OUR STORY</Link>
+            <Link to="/findus" className={styles.navItem}>FIND US</Link>
         </>
     )
 

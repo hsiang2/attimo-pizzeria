@@ -4,13 +4,18 @@ import HomeContent from '../components/HomeContent'
 
 const HomePage = () => {
     return (
-        <div className="mainLayout">
-            <Header className="layoutHeader" />
-            <div className="layoutContent fullWidth">
-                <HomeContent />
+        <>
+            <div className="mainLayout">
+                <div className="layoutHeader fullWidth" >
+                    <Header />
+                </div>
+                <div className="layoutContent fullWidth">
+                    <HomeContent />
+                </div>
+                <Footer className="layoutFooter" />
             </div>
-            <Footer className="layoutFooter" />
-        </div>
+        </>
+        
     )
 }
 

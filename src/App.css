@@ -1,10 +1,37 @@
 /* General Styles */
 /* RWD Container */
+.slick-prev:before {
+  content: url(/public/images/icon_arrow_l.png);
+}
+.slick-next:before {
+  content: url(/public/images/icon_arrow_r.png);
+}
+
+.bgMenu {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%; */
+  /* height: 100vh;
+  width: 100vw; */
+  min-width: 100%;
+  min-height: 100%;
+
+  background-image: url("/public/images/bg_menu_sm.png");
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
 .container {
   /* background-color: blue; */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 @media (min-width: 576px) {
@@ -17,11 +44,19 @@
   .container {
     width: 720px;
   }
+
+  .bgMenu {
+    background-image: url("/public/images/bg_menu_md.png");
+  }
 }
 
 @media (min-width: 992px) {
   .container {
     width: 960px;
+  }
+
+  .bgMenu {
+    background-image: url("/public/images/bg_menu_lg.png");
   }
 }
 
@@ -46,6 +81,12 @@
 
 /* body */
 body {
+  /* height: 100%;
+  width: 100%;
+  margin: 0; */
+  /* margin: 0;
+  height: 100%; */
+  /* overflow-x: hidden; */
   /* background-image: url(); */
   font-size: 16px;
   line-height: 1.6;
@@ -53,13 +94,18 @@ body {
 
 /* Layout */
 .mainLayout {
+  /* overflow-x: hidden;
+  width: 100%; */
+  overflow-x: hidden;
+
+
   display: grid;
   min-height: 100vh;
   grid-template-areas:
-    "header"
+    /* "header" */
     "content"
     "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   /* gap: 1em; */
   margin-bottom: 0;
   padding-bottom: 0;
@@ -67,13 +113,16 @@ body {
 
 .layoutHeader {
   position: fixed;
-  grid-area: header;
+  z-index: 1;
+  /* grid-area: header;
   padding: 0;
   height: auto;
-  line-height: 1.6;
+  line-height: 1.6; */
 }
 
 .layoutFooter {
+  /* overflow: auto; */
+
   grid-area: footer;
   padding: 0;
   height: auto;
@@ -81,6 +130,9 @@ body {
 }
 
 .layoutContent {
+  /* overflow-x: hidden;
+  width: 100%; */
+
   grid-area: content;
 }
 
@@ -90,6 +142,8 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
+
 
 
 /* #root {

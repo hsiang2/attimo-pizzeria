@@ -1,0 +1,166 @@
+.item {
+    /* max-width: 150px;
+    height: 5rem; */
+    padding: 0 1.4rem;
+    max-width: 9.5rem;
+    object-fit: contain;
+    /* object-fit: cover; */
+  }
+  
+  .item:last-of-type {
+    padding-left: 0;
+  }
+
+  @media (min-width: 768px) {
+    .item {
+        /* max-width: 150px;
+        height: 5rem; */
+        padding: 0 2rem;
+        max-width: 14rem;
+        
+        /* object-fit: cover; */
+      }
+  }
+  
+  @media (min-width: 992px) {
+    .item {
+        /* max-width: 150px;
+        height: 5rem; */
+        padding: 0 2.75rem;
+        max-width: 18rem;
+        
+        /* object-fit: cover; */
+      }
+  }
+
+  .container {
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+  }
+
+  
+  .inner {
+    background-color: blue;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 122px;
+    width: 224px;
+    /* height: 5rem; */
+  }
+  
+  .wrapper {
+    position: absolute;
+    display: flex;
+  }
+  
+.animation {
+    display: flex;
+    background-color: red;
+    /* animation: swipe var(--speed) linear infinite backwards; */
+    /* animation: swipe 5000 linear infinite backwards; */
+  }
+  
+  /* @keyframes swipe {
+    0% {
+      transform: translate(0);
+    }
+  
+    100% {
+      transform: translate(-100%);
+    }
+  } */
+
+  @media (min-width: 768px) {
+    .inner {
+ 
+      /* height: 340px; */
+      /* height: 5rem; */
+    }
+}
+  
+@media (min-width: 992px) {
+  .inner {
+
+    /* height: 336px; */
+    /* height: 5rem; */
+  }
+
+}
+  
+
+
+/* .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .wrapper {
+    background-color: blue;
+    display: flex;
+    width: 100%;
+
+    position: relative;
+} */
+
+/* .contentWrapper {
+    overflow: hidden;
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+} */
+
+/* .content {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+} */
+
+/* hide scrollbar in webkit browser */
+/* .content::-webkit-scrollbar, .content::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    transform: translateX(-(var(--currentIndex) * 50%));
+}
+
+.content > * {
+    width: 50%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    .content {
+        transform: translateX(-(var(--currentIndex) * 25%));
+    }
+    .content > * {
+        width: 25%;
+    }
+}
+  
+@media (min-width: 992px) {
+    .content {
+        transform: translateX(-(var(--currentIndex) * 20%));
+    }
+    .content > * {
+        width: 20%;
+    }
+}
+ */
+
+.arrowL, .arrowR {
+
+}
+
+.left-arrow {
+    /* left: 24px; */
+}
+
+.right-arrow {
+    /* right: 24px; */
+}

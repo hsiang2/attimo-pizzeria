@@ -1,58 +1,58 @@
 [
     {
         "name": "olive",
-        "image": "olive.png"
+        "image": "/images/olive.png"
     },
     {
         "name": "basil",
-        "image": "basil.png"
+        "image": "/images/basil.png"
     },
     {
         "name": "cheese",
-        "image": "cheese.png"
+        "image": "/images/cheese.png"
     },
     {
         "name": "tomato",
-        "image": "tomato.png"
+        "image": "/images/tomato.png"
     },
     {
         "name": "mushroom",
-        "image": "mushroom.png"
+        "image": "/images/mushroom.png"
     },
     {
         "name": "shellfish",
-        "image": "shellfish.png"
+        "image": "/images/shellfish.png"
     },
     {
         "name": "bell pepper",
-        "image": "bell-pepper.png"
+        "image": "/images/bell-pepper.png"
     },
     {
         "name": "garlic",
-        "image": "garlic.png"
+        "image": "/images/garlic.png"
     },
     {
         "name": "pineapple",
-        "image": "pineapple.png"
+        "image": "/images/pineapple.png"
     },
     {
         "name": "onion",
-        "image": "onion.png"
+        "image": "/images/onion.png"
     },
     {
         "name": "sausage",
-        "image": "sausage.png"
+        "image": "/images/sausage.png"
     },
     {
         "name": "anchovy",
-        "image": "anchovy.png"
+        "image": "/images/anchovy.png"
     },
     {
         "name": "avocado",
-        "image": "avocado.png"
+        "image": "/images/avocado.png"
     },
     {
         "name": "corn",
-        "image": "corn.png"
+        "image": "/images/corn.png"
     }
 ]

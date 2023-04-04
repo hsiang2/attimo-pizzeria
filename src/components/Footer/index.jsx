@@ -7,12 +7,12 @@ import styles from "./footer.module.css"
 const Footer = () => {
     return (
         <>
-            <div>
+            <div style={{backgroundColor: "lightblue"}}>
                 <div className="container">
                     <footer className={styles.footer}>
                         <div className={styles.logo}>
                             <Link to="/">
-                                <img src="img_logo_footer.png" alt="logo" className={styles.logoSize} />
+                                <img src="/images/img_logo_footer.png" alt="logo" className={styles.logoSize} />
                             </Link>
                         </div>
                         <div className={styles.content}>
@@ -70,7 +70,7 @@ const Footer = () => {
                     </footer>
                 </div>
             </div>
-            <div>
+            <div style={{backgroundColor: "lightgray"}}>
                 <p className={styles.copyright}>© 2023 Attimo Pizzeria</p>
             </div>
         </>

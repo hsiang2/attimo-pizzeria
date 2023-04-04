@@ -12,12 +12,12 @@ const HomeContent = () => {
                         <h1>Attimo<br />Pizzeria</h1>
                         <p>Time Flies When You’re Eating Pies</p>
                     </div>
-                    <img src='img_header.png' alt='pizza' className={styles.bannerImage} />
+                    <img src='/images/img_header.png' alt='pizza' className={styles.bannerImage} />
                 </div>
             </div>
             
             <div className={styles.story}>
-                <img src='img_pizza_1.png' alt='pizza' className={styles.storyImage} />
+                <img src='/images/img_pizza_home_1.png' alt='pizza' className={styles.storyImage} />
                 <div className={styles.storyContent}>
                     <h1>Our Story</h1>
                     <p>Attimo is derived from the Italian language, which means "moment".</p>
@@ -38,7 +38,7 @@ const HomeContent = () => {
                         <LearnMoreButton />
                     </div>
                 </div>
-                <img src='img_pizza_2.png' alt='pizza' className={styles.ingredientsImage} />
+                <img src='/images/img_pizza_home_2.png' alt='pizza' className={styles.ingredientsImage} />
             </div>
             <IngredientsList ingredients={ingredients} speed={50000} />
             <div className={styles.bottomButton}>
