@@ -1,7 +1,13 @@
 import { useDispatch } from "react-redux";
 import { notification } from "antd";
+import { addCartItems } from "../../redux/cartSlice";
+import uniqueId from 'lodash/uniqueId';
 
-const AddToCartButton = ({ product, qty, crust, size, add, remove }) => {
+const AddToCartButton = ({ product, qty, crust, size, add, remove, id }) => {
+    if(id == '') {
+        id = uniqueId()
+    }
+
     const dispatch = useDispatch();
 
     const openNotification = () => {
@@ -16,12 +22,16 @@ const AddToCartButton = ({ product, qty, crust, size, add, remove }) => {
     const addToCart = () => {
       openNotification();
       dispatch(addCartItems({
-        product: product,
-        
-        // id: product.id,
-        // name: product.name,
-        // image: product.image,
-        // price: product.price,
+        id: id,
+        productId: product.id,
+        name: product.name,
+        image: product.image,
+        price: product.price,
+        qty,
+        crust,
+        size,
+        add,
+        remove
         // countInStock: product.countInStock,
         // qty,
       }))

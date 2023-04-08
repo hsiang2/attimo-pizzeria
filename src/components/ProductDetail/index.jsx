@@ -1,25 +1,41 @@
 import { Icon } from "@iconify/react"
 import { Segmented, } from "antd"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Slider from "react-slick"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useSearchParams } from "react-router-dom"
 import AddToCartButton from "../AddToCartButton"
 import styles from "./productDetail.module.css"
+import { selectCartItems } from "../../redux/cartSlice"
+import { compose } from "@reduxjs/toolkit"
 
 const ProductDetail = ({ product }) => {
-    // const [searchParams] = useSearchParams()
-    // const cartId = searchParams.get('cartId')
+    const [searchParams] = useSearchParams()
+    const cartId = searchParams.get('cartId')
+    const dispatch = useDispatch()
+    const cartItems = useSelector(selectCartItems)
 
-    // const cartItem = useSelector()
+    const item = !!cartId ? cartItems.find(x => x.id == cartId) : null
+    // console.log(cartId)
+    const initQty = item != null ? item.qty : 1
+    const initRemove = item != null ? item.remove : []
+    const initAdd = item != null ? item.add : []
+    const initSize = item != null ? item.size : 'S'
+    const initCrust = item != null ? item.crust : 'thin'
 
-    const initQty = 1
-
-    const [remove, setRemove] = useState([])
-    const [add, setAdd] = useState([])
-    const [crust, setCrust] = useState('thin')
-    const [size, setSize] = useState('S')
+    const [remove, setRemove] = useState(initRemove)
+    const [add, setAdd] = useState(initAdd)
+    const [crust, setCrust] = useState(initCrust)
+    const [size, setSize] = useState(initSize)
     const [qty, setQty] = useState(initQty)
+
+    // useEffect(() => {
+    //     setRemove(initRemove)
+    //     setAdd(initAdd)
+    //     setCrust(initCrust)
+    //     setSize(initSize)
+    //     setQty(initQty)
+    //  }, [initQty, initRemove, initAdd, initCrust, initSize])
 
     const clickRemove = (option) => {
         const index = remove.indexOf(option)
@@ -176,7 +192,7 @@ const ProductDetail = ({ product }) => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}}>
                     <AddToCartButton 
-                        product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} 
+                        product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} id=''
                     />
                 </div>
             </div>

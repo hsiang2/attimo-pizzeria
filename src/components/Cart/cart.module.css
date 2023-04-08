@@ -1,0 +1,59 @@
+/* .drawer .ant-drawer-content{
+    background-color: red;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .drawer {
+        width: 48%;
+    }
+}
+  
+@media (min-width: 992px) {
+    .drawer {
+        width: 33%;
+    }
+} */
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.content {
+    flex: 8 1;
+    margin-left: 1rem;
+}
+
+.image {
+    max-width: 7rem;
+    flex: 1 1
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qtyWrapper {
+    width: 4.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bottom {
+    composes: between;
+    margin-top: 1.5rem;
+    margin-bottom: 2.75rem;
+}
+
+.clear {
+    text-decoration: underline;
+    margin: 0;
+}
