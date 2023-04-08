@@ -7,6 +7,40 @@
   content: url(/public/images/icon_arrow_r.png);
 }
 
+.ant-segmented .ant-segmented-item-selected {
+  background-color: #F9F1E15C;
+  border: solid 1px #E9DEC682;
+  border-radius: 60px;
+  box-shadow: inset 1px 3px 3px 0 #FFFFFF40;
+  box-shadow: 1px 1px 4px 0 #A99A79B3;
+  width: 5.9rem;
+  height: 2.25rem;
+}
+
+.ant-segmented .ant-segmented-item {
+  border-radius: 60px;
+  transition: #F9F1E15C 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 5.9rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-segmented .ant-segmented-thumb {
+  border: solid 1px #E9DEC682;
+  box-shadow: inset 1px 3px 3px 0 #FFFFFF40;
+  box-shadow: 1px 1px 4px 0 #A99A79B3;
+  background-color: #F9F1E15C;
+  border-radius: 60px;
+  width: 5.9rem;
+  height: 2.25rem;
+}
+
+.ant-segmented .ant-segmented-group {
+  justify-content: space-between;
+}
+
 .bgMenu {
   /* position: fixed;
   top: 0;
@@ -24,6 +58,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   /* height: 100%; */
+}
+.bgProduct {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/bg_product_sm.png");
 }
 
 .container {
@@ -48,6 +91,9 @@
   .bgMenu {
     background-image: url("/public/images/bg_menu_md.png");
   }
+  .bgProduct {
+    background-image: url("/public/images/bg_product_md.png");
+  }
 }
 
 @media (min-width: 992px) {
@@ -57,6 +103,9 @@
 
   .bgMenu {
     background-image: url("/public/images/bg_menu_lg.png");
+  }
+  .bgProduct {
+    background-image: url("/public/images/bg_product_lg.png");
   }
 }
 

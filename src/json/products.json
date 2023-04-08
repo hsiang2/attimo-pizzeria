@@ -7,7 +7,17 @@
       "image": "/images/img_pizza_1.png",
       "description": "pepper, bell pepper and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]
     },
     { 
       "id": "2",

@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { Switch } from "antd"
 import { Icon } from "@iconify/react"
 import NavBar from "../NavBar"
-import CartButton from "../CartButton"
 import styles from './header.module.css'
+import Cart from "../Cart"
 
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
                         <Link to="/" className={styles.icon}>
                             <Icon icon="ph:user-circle" />
                         </Link>
-                        <CartButton />
+                        <Cart />
                     </div>
                 </div>
                 

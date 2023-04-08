@@ -1,0 +1,136 @@
+.bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 99.8rem;
+    background-image: url("/public/images/bg_content_sm.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info {
+    text-align: center;
+    width: 16.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+    margin-top: 11rem;
+}
+
+.wrapper {
+    margin: 0 auto 5.8rem;
+    width: 17.8rem; 
+    /* overflow: "hidden", margin: "0" */
+}
+
+@media (min-width: 768px) {
+    .segmented {
+        width: 14.8rem;
+    }
+    .bg {
+        height: 57.3rem;
+        flex-direction: row;
+        background-image: url("/public/images/bg_content_md.png");
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .info {
+        width: 21.25rem;
+    }
+    .bg {
+        height: 52rem;
+        background-image: url("/public/images/bg_content_lg.png");
+    }
+  }
+.ingredient {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    height: 104px;
+    border-radius: 20px;
+    margin-right: 1.5rem;
+    background-color: #DBD3C273;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.optionIcon {
+    position: absolute;
+    display: none;
+    width: 36px;
+    height: 36px;
+}
+.ingredient:hover {
+    background-color: #E5D9C68C;
+    background-image: none;
+    box-shadow: none;
+}
+.ingredient:hover > .optionIcon {
+    display: block;
+}
+
+.ingredientActive {
+    composes: ingredient;
+    background-image: url(/public/images/bg_ingredient.png);
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 4px 0 #00000033;
+}
+
+.ingredientsIconActive {
+    width: 36px;
+    height: 36px;
+    opacity: 1;
+}
+.ingredientsIcon {
+    composes: ingredientsIconActive;
+    opacity: 0.3;
+}
+.ingredient:hover > .ingredientsIconActive {
+    opacity: 0.3;
+}
+
+.ingredientsFontActive {
+    opacity: 1;
+}
+
+.ingredientsFont {
+    opacity: 0.5;
+}
+
+.ingredient:hover > .ingredientsFontActive {
+    opacity: 0.5;
+}
+
+.ingredientsPriceActive {
+    opacity: 1;
+}
+
+.ingredientsPrice {
+    opacity: 0.4;
+}
+
+.ingredient:hover > .ingredientsPriceActive {
+    opacity: 0.4;
+}
+
+
+
+.ingredientsWrapper {
+    display: flex;
+}
+
+.segmented {
+    background-color: transparent;
+    border: solid 1px #D5C4A117;
+    border-radius: 60px;
+    box-shadow: 1px 1px 4px 0 #00000033;
+    width: 17.8rem;
+    height: 2.375rem;
+    display: flex;
+    align-items: center;
+}
+

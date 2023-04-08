@@ -6,6 +6,7 @@ import MenuNav from '../components/MenuNav'
 import ProductList from '../components/ProductList';
 import products from '../json/products.json'
 import { Breadcrumb } from 'antd';
+import ProductDetail from '../components/ProductDetail';
 
 const ProductPage = () => {
     const { productId } = useParams()
@@ -29,24 +30,20 @@ const ProductPage = () => {
     
     return (
         
-        <div className='bgMenu'>
+        <div className='bgProduct'>
             <div className="mainLayout">
                 
                 <div className="layoutHeader fullWidth" >
                     <Header />
                 </div>
-                <div className="layoutContent">
+                <div className="layoutContent fullWidth">
                     <div className='container'>
                         <MenuNav />
                         <Breadcrumb separator=">" items={breadcrumbItems} />
                     </div>
-                    {/* <div className='fullWidth'>
-                        <div>
-                            <div>
-                                <img src={product.image} />
-                            </div>
-                        </div>
-                    </div> */}
+                    <div className='fullWidth'>
+                        <ProductDetail product={product} />
+                    </div>
                     {/* <ProductList products={_products} /> */}
                 </div>
                 <Footer className="layoutFooter" />
