@@ -9,6 +9,15 @@
     width: 100%;
 }
 
+.button {
+  width: 4.875rem;
+  height: 2rem;
+}
+
+.text {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
 /* @media (min-width: 768px) {
 
 }

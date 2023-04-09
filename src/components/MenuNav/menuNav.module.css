@@ -4,7 +4,6 @@
 
 .navItem {
     margin: 0;
-    
     font-size: 1.125rem;
     padding: 1.3125rem;
     max-width: 4.4rem;
@@ -16,6 +15,26 @@
     width: 14rem; 
     /* overflow: "hidden", margin: "0" */
 }
+
+.text {
+    font-size: 1.125rem;
+    color: #6E4230;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.textActive {
+    composes: text;
+    color: #AB3421;
+}
+.textDark {
+    composes: text;
+    color: #F9A784;
+}
+.textDarkActive {
+    composes: text;
+    color: #FFF7F3CC;
+}
+
   @media (min-width: 768px) {
     .wrapper {
         width: 38.25rem; 

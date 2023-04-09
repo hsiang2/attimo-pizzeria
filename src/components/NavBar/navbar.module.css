@@ -4,6 +4,15 @@
 
 .navItem {
     margin-left: 3.5rem;
+    font-weight: 500;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1.125rem;
+}
+
+.drawer {
+    display: flex; 
+    flex-direction: column;
+    row-gap: 2rem;
 }
 
 @media (min-width: 992px) {
@@ -13,3 +22,4 @@
         /* background-color: aqua; */
     }
 }
+

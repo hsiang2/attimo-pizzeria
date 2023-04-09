@@ -1,36 +1,15 @@
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import { selectLightMode } from "../../redux/colorSLice";
 
 import NavLink from "../NavLink"
 import styles from "./menuNav.module.css"
 
 const MenuNav = () => {
-    // function SampleNextArrow(props) {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //     <div
-    //         className={className}
-    //         style={{ ...style, display: "block" }}
-    //         onClick={onClick}
-    //     >
-    //         <img src="/icon_arrow_r.png" alt="next arrow" />
-    //     </div>
-    //     );
-    // }
-    
-    // function SamplePrevArrow(props) {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //     <div
-    //         className={className}
-    //         style={{ ...style, display: "block" }}
-    //         onClick={onClick}
-    //     >
-    //         <img src="/icon_arrow_l.png" alt="previous arrow" />
-    //     </div>
-    //     );
-    // }
+    const lightMode = useSelector(selectLightMode)
+
     var settings = {
         infinite: false,
         slidesToShow: 5,
@@ -52,8 +31,6 @@ const MenuNav = () => {
             }
           }
         ],
-        // nextArrow: <SampleNextArrow />,
-        // prevArrow: <SamplePrevArrow />
       };
     return (
         <div className={styles.wrapper}>
@@ -65,10 +42,19 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_pizza_active.png" : "/images/icon_pizza.png"} 
+                                    src={isActive ? "/images/icon_pizza_active.png" : lightMode ? 
+                                        "/images/icon_pizza.png" : "/images/icon_pizza_dark.png"} 
                                     className={styles.icon}
                                 />
-                                <p>PIZZAS</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }>PIZZAS</p>
                             </div>
                         )}
                     </NavLink>
@@ -79,10 +65,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_combos_active.png" : "/images/icon_combos.png"} 
+                                    src={isActive ? "/images/icon_combos_active.png" : lightMode ? 
+                                    "/images/icon_combos.png" : "/images/icon_combos_dark.png"} 
                                     className={styles.icon}
                                 />
-                                <p>COMBOS</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >COMBOS</p>
                             </div>
                         )}
                     </NavLink>
@@ -93,10 +89,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_pasta_active.png" : "/images/icon_pasta.png"} 
+                                    src={isActive ? "/images/icon_pasta_active.png" : lightMode ? 
+                                    "/images/icon_pasta.png" : "/images/icon_pasta_dark.png"}
                                     className={styles.icon}
                                 />
-                                <p>PASTA</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >PASTA</p>
                             </div>
                         )}
                         
@@ -108,10 +114,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_sides_active.png" : "/images/icon_sides.png"} 
+                                    src={isActive ? "/images/icon_sides_active.png" : lightMode ? 
+                                    "/images/icon_sides.png" : "/images/icon_sides_dark.png"}
                                     className={styles.icon}
                                 />
-                                <p>SIDES</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >SIDES</p>
                             </div>
                         )}
                         
@@ -123,10 +139,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_drinks_active.png" : "/images/icon_drinks.png"} 
+                                    src={isActive ? "/images/icon_drinks_active.png" : lightMode ? 
+                                    "/images/icon_drinks.png" : "/images/icon_drinks_dark.png"}
                                     className={styles.icon}
                                 />
-                                <p>DRINKS</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >DRINKS</p>
                             </div>
                         )}
                         
@@ -138,10 +164,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_soup_active.png" : "/images/icon_soup.png"} 
+                                    src={isActive ? "/images/icon_soup_active.png" : lightMode ? 
+                                    "/images/icon_soup.png" : "/images/icon_soup_dark.png"}
                                     className={styles.icon}
                                 />
-                                <p>SOUP</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >SOUP</p>
                             </div>
                         )}
                         
@@ -153,10 +189,20 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "/images/icon_dessert_active.png" : "/images/icon_dessert.png"} 
+                                    src={isActive ? "/images/icon_dessert_active.png" : lightMode ? 
+                                    "/images/icon_dessert.png" : "/images/icon_desserts_dark.png"}
                                     className={styles.icon}
                                 />
-                                <p>DESSERTS</p>
+                                <p className={
+                                    isActive && lightMode ? 
+                                    styles.textActive : 
+                                    !isActive && lightMode ? 
+                                    styles.text :
+                                    isActive && !lightMode ?
+                                    styles.textDarkActive :
+                                    styles.textDark
+                                }
+                                >DESSERTS</p>
                             </div>
                         )}
                         

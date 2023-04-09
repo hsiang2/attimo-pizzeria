@@ -1,25 +1,25 @@
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom";
-import { Badge, Button, Drawer } from "antd"
+import { Badge, Button, Drawer, theme } from "antd"
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, editCartItems, removeCartItems, selectCartItems } from '../../redux/cartSlice'
+import { selectLightMode } from '../../redux/colorSlice'
 import styles from './cart.module.css'
 
 const Cart = () => {
+    const {
+        token: { colorPrimary, colorTextBase, colorBgBase },
+      } = theme.useToken();
+    const lightMode = useSelector(selectLightMode)
+
     const [open, setOpen] = useState(false);
 
-    const showDrawer = () => {
-      setOpen(true);
-    };
-  
-    const onClose = () => {
-      setOpen(false);
-    };
+    const showDrawer = () => { setOpen(true); };
+    const onClose = () => { setOpen(false); };
 
     const dispatch = useDispatch()
     const cartItems = useSelector(selectCartItems)
-    // console.log(cartItems)
 
     const getTotalPrice = () => {
         return (cartItems.length > 0) ?
@@ -30,24 +30,23 @@ const Cart = () => {
      ? cartItems.reduce((sum, item) => sum + item.qty, 0)
      : 0;
      
-    //  useEffect(() => {
-    //     setOpen(false)
-    //  }, [open])
-
-    //  (product.price + add.reduce((n, {price}) => n + price, 0)) * qty}
     return(
         <>
             <div onClick={showDrawer}>
                 <Badge count={count} color="#BD5849" style={{color: 'white'}}>
-                    <Icon icon="solar:cart-large-4-linear"/>
+                    <Icon 
+                        className='icon'
+                        style={{color: colorPrimary}}
+                        icon="solar:cart-large-4-linear"
+                    />
                 </Badge>
             </div>
             <Drawer 
                 onClose={onClose} 
                 open={open} 
                 className={styles.drawer} 
-                style={{backgroundColor: '#FDF6E9'}}
-                title={<h2 style={{textAlign: 'center', marginBottom: 0}}>My Cart</h2>}
+                style={{backgroundColor: colorBgBase}}
+                title={<h2 className={styles.mainTitle} style={{color: lightMode ? '#582F0E': '#B19A81'}}>My Cart</h2>}
             >
                 {cartItems.length === 0 ? (
                     <div 
@@ -58,10 +57,10 @@ const Cart = () => {
                         }}
                     >
                         <img src="/images/img_empty_cart.png" />
-                        <p style={{textAlign: 'center', marginTop: '1.5rem'}}>
+                        <p className={styles.empty} style={{color: lightMode ? '#6E4230' : '#FEF6E0'}}>
                             Your Cart Is Empty 
                         </p>
-                        <p style={{textAlign: 'center', width: '12.3rem'}}>
+                        <p className={styles.emptyText} style={{color: lightMode ? '#6E423066' : '#FEF6E08C'}}>
                             Looks like you haven’t added anything to your cart yet
                         </p>
                     </div>
@@ -74,16 +73,26 @@ const Cart = () => {
                                 </Link>
                                 <div className={styles.content}>
                                     <div className={styles.between}>
-                                        <div className={styles.name}>{item.name}</div>
-                                        <Icon icon="system-uicons:close" onClick={() => dispatch(removeCartItems(item.id))}/>
+                                        <div className={styles.name} style={{color: colorTextBase}}>{item.name}</div>
+                                        <Icon icon="system-uicons:close" className={styles.iconDelete} onClick={() => dispatch(removeCartItems(item.id))}/>
                                     </div>
                                     <div className={styles.custom}>
-                                        <p>size : {item.size}</p> 
-                                        <p>crust : {item.crust}</p> 
+                                        <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#FFA69ECC'}} >
+                                            size&nbsp;&nbsp;:&nbsp;&nbsp;<strong>{item.size}</strong></p> 
+                                        <p className={styles.title} style={{color: lightMode ? '#779624CC' : '#B6C199'}} >
+                                            crust&nbsp;&nbsp;:&nbsp;&nbsp;<strong>{item.crust}</strong></p> 
                                     </div>
                                     <div className={styles.custom}>
-                                        {item.remove.length === 0 ? <></> : <p>x {item.remove.map(x => x.name).join(', ')}</p>  }
-                                        {item.add.length === 0 ? <></> : <p>+ {item.add.map(x => x.name).join(', ')}</p>  }
+                                        {item.remove.length === 0 ? <></> : 
+                                            <p className={styles.title} style={{color: lightMode ? '#D85643CC' : '#A9A9A9'}}>
+                                                x {item.remove.map(x => x.name).join(', ')}
+                                            </p>  
+                                        }
+                                        {item.add.length === 0 ? <></> : 
+                                            <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#A9A9A9'}}>
+                                                + {item.add.map(x => x.name).join(', ')}
+                                            </p>  
+                                        }
                                     </div>
                                     <div className={styles.between}>
                                         <div className={styles.qtyWrapper}>
@@ -104,9 +113,9 @@ const Cart = () => {
                                                         }))
                                                 }} 
                                             >
-                                                <Icon icon="fluent:subtract-24-regular" />
+                                                <Icon style={{color: colorTextBase}} icon="fluent:subtract-24-regular" />
                                             </button>
-                                                {item.qty}
+                                                <h6 style={{color: lightMode ? '#483E2E' : 'FEF6E099'}} className={styles.qty}>{item.qty}</h6>
                                             <button
                                                 onClick={() => {
                                                     let qty = item.qty + 1
@@ -124,33 +133,40 @@ const Cart = () => {
                                                     }))
                                                 }} 
                                             >
-                                                <Icon icon="quill:add"/>
+                                                <Icon style={{color: colorTextBase}} icon="quill:add"/>
                                             </button>   
                                         </div>
-                                        <h2>${((item.price + item.add.reduce((n, {price}) => n + price, 0)) * item.qty).toFixed(2)}</h2>
+                                        <h2 className={styles.qty} style={{color: lightMode ? '#AB3421' : '#F9A784CC'}}>
+                                            ${((item.price + item.add.reduce((n, {price}) => n + price, 0)) * item.qty).toFixed(2)}
+                                        </h2>
                                     </div>
                                 </div>
                             </li>
                         ))}
-                        <hr style={{backgroundColor: '#C5BDB4CC', height: '1.25px', borderWidth: 0}}/>
+                        <hr style={{backgroundColor: lightMode ? '#C5BDB4CC' : '#C5BDB445', height: '1.25px', borderWidth: 0}}/>
                         <div className={styles.bottom}>
                             <button 
                                 onClick={() => dispatch(clearCart())} 
-                                style={{display: 'flex', gap: '0.75rem', alignItems: 'center'}}
+                                style={{ color: lightMode ? '#6E4230' : '#827E7C',
+                                    display: 'flex', gap: '0.75rem', alignItems: 'center'
+                                }}
                             >
-                                <Icon icon="solar:trash-bin-minimalistic-linear" />
+                                <Icon style={{fontSize: '1.375rem'}} icon="solar:trash-bin-minimalistic-linear" />
                                 <p className={styles.clear}>clear  all</p>
                             </button>
-                            <div style={{display: 'flex', gap: '1.18rem', alignItems: 'center'}}>
-                                <h4 style={{margin: 0}}>Total</h4>
+                            <div style={{ color: lightMode ? '#AB3421' : '#F9A784',
+                                    display: 'flex', gap: '1.18rem', alignItems: 'center'
+                                }}
+                            >
+                                <h4 style={{}} className={styles.total}>Total</h4>
                                 <div className={styles.totalPrice}>${getTotalPrice().toFixed(2)}</div>
                             </div>
                         </div>
                     </>
                 )}      
-                <Button className="customButton" style={{display: 'block', width: '17.3rem', marginRight: 'auto', marginLeft: 'auto'}}>
-                    <h4>CHECKOUT</h4>
-                </Button>
+                <div className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}>
+                    <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>CHECKOUT</h4>
+                </div>
             </Drawer>
         </>
     )

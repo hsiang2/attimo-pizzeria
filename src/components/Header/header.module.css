@@ -13,8 +13,8 @@
 
 .navLayout {
   /* position: fixed; */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
   margin-left: 2.25rem;
   margin-right: 2.25rem;
   /* background-color: antiquewhite; */
@@ -38,8 +38,8 @@
 
 @media (min-width: 768px) {
   .navLayout {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
     grid-template-areas:
       "nav switch";
     grid-template-columns: 1fr auto;
@@ -58,7 +58,8 @@
 
 @media (min-width: 992px) {
   .navLayout {
-  
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
     gap: 4.25rem;
   }
   .showMobile {

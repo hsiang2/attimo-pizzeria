@@ -41,20 +41,6 @@
   justify-content: space-between;
 }
 
-/* .ant-drawer-header {
-  background-color: #5340ff;
-  border-radius: 0;
-}
-
-.ant-drawer-title {
-  color: #fff;
-}
-
-.ant-drawer-body {
-  background-color: #5340ff;
-  color: #fff;
-  height: calc(100vh - 55px);
-} */
 
 .bgMenu {
   /* position: fixed;
@@ -74,6 +60,37 @@
   background-repeat: no-repeat;
   /* height: 100%; */
 }
+.bgMenuDark {
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("/public/images/bg_menu_sm_dark.png");
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgHomeDark {
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("/public/images/bg_home_sm_dark.png");
+  background-color: #100C09;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgHome {
+  min-width: 100%;
+  min-height: 100%;
+
+  background-image: url("/public/images/bg_home_sm.png");
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bgProduct {
   min-width: 100%;
   min-height: 100%;
@@ -84,56 +101,32 @@
   background-image: url("/public/images/bg_product_sm.png");
 }
 
+.bgProductDark {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/public/images/bg_product_sm_dark.png");
+}
+
+.bgHeader {
+  background-color: #F9EED9;
+  box-shadow: 0 2px 12px 0 #A1A5963B;
+}
+
+.bgHeaderDark {
+  background-color: #0A0806;
+  box-shadow: 0 2px 12px 0 #2B2B2B26;
+}
+
 .container {
   /* background-color: blue; */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 
-}
-
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-
-  .bgMenu {
-    background-image: url("/public/images/bg_menu_md.png");
-  }
-  .bgProduct {
-    background-image: url("/public/images/bg_product_md.png");
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
-
-  .bgMenu {
-    background-image: url("/public/images/bg_menu_lg.png");
-  }
-  .bgProduct {
-    background-image: url("/public/images/bg_product_lg.png");
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .container {
-    width: 1500px;
-  }
 }
 
 .fullWidth {
@@ -206,11 +199,176 @@ button {
   padding: 0;
   cursor: pointer;
 }
-
+/* BUTTON */
 .customButton {
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.customButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px; 
+  padding: 1.5px; 
+  background:linear-gradient(180deg, #AB3421, #AB34215E); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
 }
 
+.customButton:hover:before{
+  background:#BD5849; 
+  -webkit-mask: none;
+  box-shadow: 0 8px 40px #6A1F1F42;
+}
+
+.customButton:active:before{
+  background:#AB3421; 
+  -webkit-mask: none;
+  box-shadow: 0 8px 40px #6A1F1F42;
+}
+
+.buttonText {
+  z-index: 1;
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  background: -webkit-linear-gradient(-90deg, #AB3421, #AB34215E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.customButton:hover > .buttonText {
+  background: #F9EED9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* BUTTON DARK */
+.customButtonDark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.customButtonDark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px; 
+  padding: 1.5px; 
+  background:linear-gradient(180deg, #F9A784, #FFD5C38C); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.buttonTextDark {
+  z-index: 1;
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  background:linear-gradient(180deg, #F9A784, #FFD5C38C); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.customButtonDark:hover:before{
+  background:#F9A784BF; 
+  -webkit-mask: none;
+  box-shadow: 0 8px 40px #F9A78042;
+}
+
+.customButtonDark:active:before{
+  background:#F9A780; 
+  -webkit-mask: none;
+  box-shadow: 0 8px 40px #F9A78042;
+}
+.customButtonDark:hover > .buttonTextDark {
+  background: #FEF6E0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icon {
+  font-size: 1.375rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+
+  .bgMenu {
+    background-image: url("/public/images/bg_menu_md.png");
+  }
+  .bgMenuDark {
+    background-image: url("/public/images/bg_menu_md_dark.png");
+  }
+  .bgHome {
+    background-image: url("/public/images/bg_home_md.png");
+  }
+
+  .bgHomeDark {
+    background-image: url("/public/images/bg_home_md_dark.png");
+  }
+  .bgProduct {
+    background-image: url("/public/images/bg_product_md.png");
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .bgProductDark {
+    background-image: url("/public/images/bg_product_md_dark.png");
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+  .bgHome {
+    background-image: url("/public/images/bg_home_lg.png");
+  }
+  .bgHomeDark {
+    background-image: url("/public/images/bg_home_lg_dark.png");
+  }
+  .bgMenu {
+    background-image: url("/public/images/bg_menu_lg.png");
+  }
+  .bgMenuDark {
+    background-image: url("/public/images/bg_menu_lg_dark.png");
+  }
+  .bgProduct {
+    background-image: url("/public/images/bg_product_lg.png");
+  }
+  .icon {
+    font-size: 1.75rem;
+  }
+  .bgProductDark {
+    background-image: url("/public/images/bg_product_lg_dark.png");
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1500px;
+  }
+}
 
 /* #root {
   max-width: 1280px;

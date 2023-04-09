@@ -7,6 +7,8 @@ import ProductList from '../components/ProductList';
 import products from '../json/products.json'
 import { Breadcrumb } from 'antd';
 import ProductDetail from '../components/ProductDetail';
+import { useSelector } from 'react-redux';
+import { selectLightMode } from '../redux/colorSLice';
 
 const ProductPage = () => {
     const { productId } = useParams()
@@ -27,13 +29,13 @@ const ProductPage = () => {
             key: 'detail',
         },
     ]
-    
+    const lightMode = useSelector(selectLightMode)
     return (
         
-        <div className='bgProduct'>
+        <div className={lightMode ? 'bgProduct' : 'bgProductDark'}>
             <div className="mainLayout">
                 
-                <div className="layoutHeader fullWidth" >
+                <div className={`layoutHeader fullWidth ${lightMode ? 'bgHeader' : 'bgHeaderDark'}`} >
                     <Header />
                 </div>
                 <div className="layoutContent fullWidth">

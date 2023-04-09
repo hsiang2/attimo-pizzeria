@@ -1,9 +1,11 @@
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MenuNav from '../components/MenuNav'
 import ProductList from '../components/ProductList';
 import products from '../json/products.json'
+import { selectLightMode } from '../redux/colorSLice';
 
 const MenuPage = () => {
     const { categoryName } = useParams()
@@ -11,12 +13,14 @@ const MenuPage = () => {
         x => x?.category.toUpperCase() === categoryName.toUpperCase()
       );
     
+    const lightMode = useSelector(selectLightMode)
+    
     return (
         
-        <div className='bgMenu'>
+        <div className={lightMode ? 'bgMenu' : 'bgMenuDark'}>
             <div className="mainLayout">
                 
-                <div className="layoutHeader fullWidth" >
+                <div className={`layoutHeader fullWidth ${lightMode ? 'bgHeader' : 'bgHeaderDark'}`} >
                     <Header />
                 </div>
                 <div className="layoutContent container">

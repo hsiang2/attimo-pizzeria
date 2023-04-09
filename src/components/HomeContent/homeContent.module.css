@@ -5,6 +5,27 @@
     margin: 11.375rem 0 23rem 1.375rem;
 }
 
+.mainTitle {
+    font-size: 2rem;
+    font-family: 'Alice', serif;
+}
+
+.slogan {
+    font-size: 0.75rem;
+    font-family: 'Alice', serif;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 0.875rem;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
 .bannerImage {
     width: 16.5rem;
 }
@@ -24,6 +45,7 @@
 .contentButton {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .ingredients {
@@ -50,9 +72,17 @@
     display: flex;
     justify-content: center;
     margin-bottom: 7.3rem;
+    margin-top: 2rem;
+}
+.button {
+    width: 8.75rem;
+    height: 2.375rem;
 }
 
 @media (min-width: 768px) {
+    .bgHeader {
+        background-image: url("/public/images/bg_home_header_md.png");
+    }
     .banner {
         margin: 10.5rem 0 30rem;
     }
@@ -95,9 +125,21 @@
     .bottomButton {
         margin-bottom: 12rem;
     }
+
+    .mainTitle {
+        font-size: 4rem
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+
 }
   
 @media (min-width: 992px) {
+    .bgHeader {
+        background-image: url("/public/images/bg_home_header_lg.png");
+    }
     .banner {
         margin: 9.8rem 0 19rem;
     }
@@ -123,5 +165,21 @@
 
     .bottomButton {
         margin-bottom: 6.3rem;
+    }
+    .mainTitle {
+        font-size: 5.25rem
+    }
+    .slogan {
+        font-size: 1.25rem;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 1.25rem;
+    }
+    .button {
+        width: 11rem;
+        height: 3rem;
     }
 }

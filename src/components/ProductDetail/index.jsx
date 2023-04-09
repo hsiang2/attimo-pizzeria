@@ -7,7 +7,6 @@ import { useSearchParams } from "react-router-dom"
 import AddToCartButton from "../AddToCartButton"
 import styles from "./productDetail.module.css"
 import { selectCartItems } from "../../redux/cartSlice"
-import { compose } from "@reduxjs/toolkit"
 
 const ProductDetail = ({ product }) => {
     const [searchParams] = useSearchParams()
@@ -87,8 +86,8 @@ const ProductDetail = ({ product }) => {
                     {ingredient.name}
                 </h5>
                 <h6 className={selected ? styles.ingredientsPriceActive : styles.ingredientsPrice}>
-                    ${ingredient.price
-                }</h6>
+                    ${ingredient.price.toFixed(2)}
+                </h6>
             </div>
         )
     }
@@ -109,8 +108,8 @@ const ProductDetail = ({ product }) => {
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 3.3,
+              slidesToScroll: 3.3,
             }
           }
         ],
@@ -119,7 +118,8 @@ const ProductDetail = ({ product }) => {
       };
 
     return(
-        <div className={styles.bg}>
+        <div className={styles.container}>
+            <div className={styles.bg}></div>
             <div className={styles.info}>
                 <img src={product.image} />
                 <h2>{product.name}</h2>
@@ -127,31 +127,31 @@ const ProductDetail = ({ product }) => {
             </div>
             <div className={styles.wrapper}>
                 <h4>Ingredients</h4><span>x {remove.map(x => x.name).join(', ')}</span>
-                {/* <div className={styles.ingredientsWrapper}> */}
+                <div className={styles.ingredientsWrapper}>
                 
-                <Slider {...settings}>
+                {/* <Slider {...settings} style={styles.slider}> */}
                     {product.ingredients.map(ingredient => (
                         <RemoveOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={remove.includes(ingredient)} onClick={clickRemove} 
                         />
                     ))}
-                </Slider>
+                {/* </Slider> */}
                     
-                {/* </div> */}
+                </div>
 
                 <h4>Add More</h4><span>+ {add.map(x => x.name).join(', ')}</span>
-                {/* <div className={styles.ingredientsWrapper}> */}
-                <Slider {...settings}>
+                <div className={styles.ingredientsWrapper}>
+                {/* <Slider {...settings}> */}
                     {product.addMore.map(ingredient => (
                         <AddOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={add.includes(ingredient)} onClick={clickAdd} 
                         />
                     ))}
-                </Slider>
+                {/* </Slider> */}
                     
-                {/* </div> */}
+                </div>
 
                 <div>
                     <div>
