@@ -3,11 +3,16 @@
 }
 
 .navItem {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+
     margin: 0;
     font-size: 1.125rem;
     padding: 1.3125rem;
     max-width: 4.4rem;
-    
     object-fit: contain;
 }
 .wrapper {

@@ -36,7 +36,7 @@ const Cart = () => {
                 <Badge count={count} color="#BD5849" style={{color: 'white'}}>
                     <Icon 
                         className='icon'
-                        style={{color: colorPrimary}}
+                        style={{color: colorPrimary, cursor: 'pointer'}}
                         icon="solar:cart-large-4-linear"
                     />
                 </Badge>

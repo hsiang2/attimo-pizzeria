@@ -1,6 +1,9 @@
 /* General Styles */
 /* RWD Container */
 .slick-prev:before {
+  position: absolute;
+  top: 0;
+  left: -4rem;
   content: url("https://github.com/hsiang2/movie_image/blob/main/icon_arrow_l.png?raw=true");
 }
 .slick-next:before {
