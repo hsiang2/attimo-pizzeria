@@ -13,7 +13,8 @@ const EditButton = ({ product, qty, crust, size, add, remove, id }) => {
       notification.open({
         message: 'Shopping Notification',
         description:
-          `${qty} ${qty > 1 ? "pieces" : "piece"} of ${product.name} ${qty > 1 ? "have" : "has"} been added to your cart.`,
+          "Your order has been modified.",
+          // `${qty} ${qty > 1 ? "pieces" : "piece"} of ${product.name} ${qty > 1 ? "have" : "has"} been added to your cart.`,
         placement: 'bottomRight'
       });
     };
