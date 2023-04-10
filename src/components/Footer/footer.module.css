@@ -1,7 +1,7 @@
 .bg {
     min-width: 100%;
     min-height: 100%;
-    background-image: url("/public/images/bg_footer_lg.png");
+    background-image: url("/images/bg_footer_lg.png");
     background-color: #F9F7E5;
     background-position: center center;
     background-size: cover;
@@ -9,7 +9,7 @@
   }
 .bgDark {
     composes: bg;
-    background-image: url("/public/images/bg_footer_lg_dark.png");
+    background-image: url("/images/bg_footer_lg_dark.png");
     background-color: #17120F;
 }
 
