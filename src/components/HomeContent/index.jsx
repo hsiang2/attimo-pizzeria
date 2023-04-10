@@ -4,7 +4,7 @@ import styles from "./homeContent.module.css"
 import ingredients from "../../json/ingredients.json"
 import IngredientsList from '../IngredientsList'
 import { useSelector } from "react-redux"
-import { selectLightMode } from "../../redux/colorSLice"
+import { selectLightMode } from "../../redux/colorSlice"
 
 const HomeContent = () => {
     const {

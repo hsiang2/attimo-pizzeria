@@ -2,7 +2,7 @@
 // import "slick-carousel/slick/slick-theme.css";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
-import { selectLightMode } from "../../redux/colorSLice";
+import { selectLightMode } from "../../redux/colorSlice";
 
 import NavLink from "../NavLink"
 import styles from "./menuNav.module.css"

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HomeContent from '../components/HomeContent'
-import { selectLightMode } from '../redux/colorSLice'
+import { selectLightMode } from '../redux/colorSlice'
 
 const HomePage = () => {
     const lightMode = useSelector(selectLightMode)

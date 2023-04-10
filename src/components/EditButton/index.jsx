@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { notification } from "antd";
 import { editCartItems } from "../../redux/cartSlice";
-import { selectLightMode } from "../../redux/colorSLice";
+import { selectLightMode } from "../../redux/colorSlice";
 
 const EditButton = ({ product, qty, crust, size, add, remove, id }) => {
   const lightMode = useSelector(selectLightMode)

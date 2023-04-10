@@ -9,7 +9,7 @@ import AddToCartButton from "../AddToCartButton"
 import styles from "./productDetail.module.css"
 import { selectCartItems } from "../../redux/cartSlice"
 import { theme } from "antd"
-import { selectLightMode } from "../../redux/colorSLice"
+import { selectLightMode } from "../../redux/colorSlice"
 import EditButton from "../EditButton"
 
 const ProductDetail = ({ product }) => {

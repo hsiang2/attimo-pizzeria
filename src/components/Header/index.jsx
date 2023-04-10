@@ -5,7 +5,7 @@ import NavBar from "../NavBar"
 import styles from './header.module.css'
 import Cart from "../Cart"
 import { useDispatch, useSelector } from "react-redux"
-import { selectLightMode, setColorMode } from "../../redux/colorSLice"
+import { selectLightMode, setColorMode } from "../../redux/colorSlice"
 import { theme } from "antd"
 import Link from '../Link'
 

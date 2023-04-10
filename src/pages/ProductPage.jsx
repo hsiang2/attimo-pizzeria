@@ -7,7 +7,7 @@ import products from '../json/products.json'
 import { Breadcrumb } from 'antd';
 import ProductDetail from '../components/ProductDetail';
 import { useSelector } from 'react-redux';
-import { selectLightMode } from '../redux/colorSLice';
+import { selectLightMode } from '../redux/colorSlice';
 import { Icon } from '@iconify/react';
 import { Helmet } from 'react-helmet-async';
 

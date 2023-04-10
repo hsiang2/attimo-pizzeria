@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom"
-import { selectLightMode } from "../../redux/colorSLice";
+import { selectLightMode } from "../../redux/colorSlice";
 import styles from "./productItem.module.css"
 import { theme } from "antd";
 

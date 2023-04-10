@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import MenuNav from '../components/MenuNav'
 import ProductList from '../components/ProductList';
 import products from '../json/products.json'
-import { selectLightMode } from '../redux/colorSLice';
+import { selectLightMode } from '../redux/colorSlice';
 
 const MenuPage = () => {
     const { categoryName } = useParams()

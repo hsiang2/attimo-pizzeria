@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { Input } from "antd"
 import styles from "./footer.module.css"
 import { useSelector } from "react-redux"
-import { selectLightMode } from "../../redux/colorSLice"
+import { selectLightMode } from "../../redux/colorSlice"
 import { theme } from "antd"
 
 
