@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { notification } from "antd";
 import { addCartItems } from "../../redux/cartSlice";
 import uniqueId from 'lodash/uniqueId';
+import { selectLightMode } from "../../redux/colorSLice";
 
 const AddToCartButton = ({ product, qty, crust, size, add, remove, id }) => {
+  const lightMode = useSelector(selectLightMode)
     if(id == '') {
         id = uniqueId()
     }
@@ -38,8 +40,14 @@ const AddToCartButton = ({ product, qty, crust, size, add, remove, id }) => {
     };
 
     return (
-        <button onClick={addToCart}>
+        <button 
+          className={lightMode ? 'customButton' : 'customButtonDark'}
+          style={{width: '8.75rem', height: '2.38rem'}}
+          onClick={addToCart}
+        >
+          <h5 className={ lightMode ? "buttonText" : "buttonTextDark"}>
             ADD TO CART
+          </h5>  
         </button>
     )
 }

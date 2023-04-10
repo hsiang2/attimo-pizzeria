@@ -84,7 +84,7 @@ const Cart = () => {
                                     </div>
                                     <div className={styles.custom}>
                                         {item.remove.length === 0 ? <></> : 
-                                            <p className={styles.title} style={{color: lightMode ? '#D85643CC' : '#A9A9A9'}}>
+                                            <p className={styles.title} style={{color: lightMode ? '#D85643CC' : '#FFA69ECC'}}>
                                                 x {item.remove.map(x => x.name).join(', ')}
                                             </p>  
                                         }

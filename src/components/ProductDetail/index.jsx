@@ -1,3 +1,4 @@
+import React from "react"
 import { Icon } from "@iconify/react"
 import { Segmented, } from "antd"
 import { useState, useEffect } from "react"
@@ -7,8 +8,17 @@ import { useSearchParams } from "react-router-dom"
 import AddToCartButton from "../AddToCartButton"
 import styles from "./productDetail.module.css"
 import { selectCartItems } from "../../redux/cartSlice"
+import { theme } from "antd"
+import { selectLightMode } from "../../redux/colorSLice"
 
 const ProductDetail = ({ product }) => {
+    const {
+        token: { colorTextBase, colorPrimary },
+    } = theme.useToken();
+    const lightMode = useSelector(selectLightMode)
+
+    const slider = React.useRef(null);
+
     const [searchParams] = useSearchParams()
     const cartId = searchParams.get('cartId')
     const dispatch = useDispatch()
@@ -56,15 +66,27 @@ const ProductDetail = ({ product }) => {
 
     const RemoveOption = ({ingredient, selected, onClick }) => {
         return (
-            <div className={selected ? styles.ingredient : styles.ingredientActive} 
-                onClick={() => onClick(ingredient)}
+            <div onClick={() => onClick(ingredient)}
+                className={lightMode&&selected ? 
+                    styles.ingredient : 
+                    lightMode&&!selected ?
+                    styles.ingredientActive :
+                    !lightMode&&selected ?
+                    styles.ingredientDark :
+                    styles.ingredientActiveDark
+                } 
             >
-                <Icon icon="mingcute:close-circle-fill" className={styles.optionIcon} />
+                <Icon icon="mingcute:close-circle-fill" 
+                    style={{color: lightMode ? '#BD5849' : '#F9A784BF'}} className={styles.optionIcon} 
+                />
                 <img 
                     src={ingredient.image} 
-                    className={selected ? styles.ingredientsIcone : styles.ingredientsIconActive} 
+                    className={selected ? styles.ingredientsIcon : styles.ingredientsIconActive} 
                 />
-                <h5 className={selected ? styles.ingredientsFont : styles.ingredientsFontActive}>
+                <h5 
+                    style={{color: lightMode ? '#6E4230' : '#FEF6E0'}}
+                    className={selected ? styles.ingredientsFont : styles.ingredientsFontActive}
+                >
                     {ingredient.name}
                 </h5>
             </div>
@@ -74,18 +96,34 @@ const ProductDetail = ({ product }) => {
     const AddOption = ({ingredient, selected, onClick }) => {
 
         return (
-            <div className={selected ? styles.ingredientActive : styles.ingredient} 
-                onClick={() => onClick(ingredient)}
+            <div onClick={() => onClick(ingredient)}
+                className={lightMode&&selected ? 
+                    styles.ingredientActive : 
+                    lightMode&&!selected ?
+                    styles.ingredient :
+                    !lightMode&&selected ?
+                    styles.ingredientActiveDark :
+                    styles.ingredientDark
+                } 
             >
-                <Icon icon="solar:add-circle-bold" className={styles.optionIcon} />
+                <Icon icon="solar:add-circle-bold" 
+                    style={{color: lightMode ? '#7E8960' : '#96A179'}}
+                    className={styles.optionIcon} 
+                />
                 <img 
                     src={ingredient.image} 
                     className={selected ? styles.ingredientsIconActive : styles.ingredientsIcon} 
                 />
-                <h5 className={selected ? styles.ingredientsFontActive : styles.ingredientsFont}>
+                <h5 
+                    style={{color: lightMode ? '#6E4230' : '#FEF6E0'}}
+                    className={selected ? styles.ingredientsFontActive : styles.ingredientsFont}
+                >
                     {ingredient.name}
                 </h5>
-                <h6 className={selected ? styles.ingredientsPriceActive : styles.ingredientsPrice}>
+                <h6 
+                    style={{color: lightMode ? '#AB3421' : '#F9A784'}}
+                    className={selected ? styles.ingredientsPriceActive : styles.ingredientsPrice}
+                >
                     ${ingredient.price.toFixed(2)}
                 </h6>
             </div>
@@ -97,100 +135,142 @@ const ProductDetail = ({ product }) => {
         slidesToShow: 5,
         slidesToScroll: 5,
         initialSlide: 0,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3.5,
-              slidesToScroll: 3.5,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 3.3,
-              slidesToScroll: 3.3,
-            }
-          }
-        ],
+        // responsive: [
+        //   {
+        //     breakpoint: 992,
+        //     settings: {
+        //       slidesToShow: 3.5,
+        //       slidesToScroll: 3.5,
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 768,
+        //     settings: {
+        //       slidesToShow: 3.3,
+        //       slidesToScroll: 3.3,
+        //     }
+        //   }
+        // ],
         // nextArrow: <SampleNextArrow />,
         // prevArrow: <SamplePrevArrow />
       };
 
     return(
-        <div className={styles.container}>
-            <div className={styles.bg}></div>
+        <div className={styles.bg}>
+       {/* <div className={styles.bg}></div>      */}
             <div className={styles.info}>
                 <img src={product.image} />
-                <h2>{product.name}</h2>
-                <p>{product.description_long}</p>
+                <h2 className={styles.name} style={{color: colorTextBase}}>{product.name}</h2>
+                <p className={styles.description} style={{color: lightMode ? '#6C613980' : '#DAD7CDB3'}}>{product.description_long}</p>
             </div>
             <div className={styles.wrapper}>
-                <h4>Ingredients</h4><span>x {remove.map(x => x.name).join(', ')}</span>
-                <div className={styles.ingredientsWrapper}>
+                <div className={styles.customTitle}>
+                        <h4 className={styles.title} style={{color: lightMode ? '#6E4230' : '#FEF6E0CC'}}>
+                            Ingredients
+                        </h4>
+                        <p className={styles.customList} style={{color: lightMode ? '#D85643CC' : '#FFA69ECC'}}>
+                            <strong>x</strong>&nbsp; {remove.map(x => x.name).join(', ')}
+                        </p>
+                </div>
                 
-                {/* <Slider {...settings} style={styles.slider}> */}
+                <div className={styles.ingredientsWrapper}>
+                <Slider {...settings} style={styles.slider}>
                     {product.ingredients.map(ingredient => (
                         <RemoveOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={remove.includes(ingredient)} onClick={clickRemove} 
                         />
                     ))}
-                {/* </Slider> */}
+                </Slider>
                     
                 </div>
 
-                <h4>Add More</h4><span>+ {add.map(x => x.name).join(', ')}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'space-between'}}>
+                    <div className={styles.customTitle}>
+                        <h4 className={styles.title} style={{color: lightMode ? '#6E4230' : '#FEF6E0CC'}}>
+                            Add More
+                        </h4>
+                        <p className={styles.customList} style={{color: lightMode ? '#779624CC' : '#B6C199'}}>
+                            <strong>+</strong>&nbsp; {add.map(x => x.name).join(', ')}
+                        </p>
+                    </div>
+                    
+                    <div className={styles.arrows}>
+                        <button onClick={() => slider?.current?.slickPrev()}>
+                            <Icon className={lightMode ? styles.arrow : styles.arrowDark} icon="ic:round-keyboard-arrow-left" />
+                        </button>
+                        <button onClick={() => slider?.current?.slickNext()}>
+                            <Icon className={lightMode ? styles.arrow : styles.arrowDark} icon="ic:round-keyboard-arrow-right" />
+                        </button>
+
+                    </div>
+  
+                </div>
                 <div className={styles.ingredientsWrapper}>
-                {/* <Slider {...settings}> */}
+                <Slider ref={slider} {...settings}>
                     {product.addMore.map(ingredient => (
                         <AddOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={add.includes(ingredient)} onClick={clickAdd} 
                         />
                     ))}
-                {/* </Slider> */}
+                </Slider>
                     
                 </div>
-
-                <div>
-                    <div>
-                        <h4>Crust</h4>
+                
+                <div className={styles.crustAndSize}>
+                    <div className={styles.crust}>
+                        <h4 className={styles.title} style={{color: lightMode ? '#6E4230' : '#FEF6E0CC'}}>Crust</h4>
                         <Segmented 
                             className={styles.segmented}
+                            style={{color: lightMode ? '#3D403554' : '#FEF6E04D'}}
                             value={crust}
                             options={['thin', 'pan', 'stuffed']} 
                             onChange={setCrust}
                         />
                     </div>
-                    <div>
-                        <h4>Size</h4>
+                    <div className={styles.size}>
+                        <h4 className={styles.title} style={{color: lightMode ? '#6E4230' : '#FEF6E0CC'}}>Size</h4>
                         <Segmented 
+                            style={{color: lightMode ? '#3D403554' : '#FEF6E04D'}}
                             className={styles.segmented}
                             value={size}
                             options={['S', 'M', 'L']} 
                             onChange={setSize}
                         />
-                        <span>
-                            <Icon icon="ph:user" />
-                            {size == 'S' ? '1-2' : size == 'M' ? '3-4': '5-6'}
-                        </span>
+                        <div style={{ color: lightMode ? '#746D5D' : '#9F9C97',
+                                display: 'flex', gap: '0.25rem', alignItems: 'center', marginTop: '0.75rem'
+                            }}>
+                            <Icon style={{fontSize: '0.75rem'}} icon="ph:user" />
+                            <h4 style={{fontSize: '0.875rem', margin: 0}}>{size == 'S' ? '1-2' : size == 'M' ? '3-4': '5-6'}</h4> 
+                        </div>
                     </div>
                 </div>
                 <div 
                     style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}
                 >
-                    <div>
-                        <Icon icon="solar:minus-circle-outline" onClick={() => qty > 1 ? setQty(qty - 1) : setQty(1)} />
-                            {qty}
-                        <Icon icon="solar:add-circle-bold" onClick={() => setQty(qty + 1)} />
+                    <div style={{color: lightMode ? '#BD5849' : '#F9A784CC',
+                        width: '6.625rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <Icon icon="solar:minus-circle-outline" 
+                            style={{fontSize: '1.5rem', cursor: 'pointer'}}
+                            onClick={() => qty > 1 ? setQty(qty - 1) : setQty(1)} 
+                        />
+                            <h3 style={{}} className={styles.qty}>{qty}</h3>
+                        <Icon icon="solar:add-circle-bold" 
+                            style={{fontSize: '1.5rem', cursor: 'pointer'}}
+                            onClick={() => setQty(qty + 1)} 
+                        />
                     </div>
                     <div style={{textAlign: 'end'}}>
-                        <h4>Total</h4>
-                        <h2>${(product.price + add.reduce((n, {price}) => n + price, 0)) * qty}</h2>
+                        <h4 className={styles.total} style={{color: lightMode ? '#323D1482' : '#DAD7CDB3'}}>
+                            Total
+                        </h4>
+                        <h2 className={styles.totalPrice} style={{color: lightMode ? '#AB3421' : '#F9A784B3'}}>
+                            ${(product.price + add.reduce((n, {price}) => n + price, 0)) * qty}
+                        </h2>
                     </div>
                 </div>
-                <div style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}}>
+                <div style={{display: 'flex', justifyContent: 'end', alignItems: 'center', marginTop: '2rem'}}>
                     <AddToCartButton 
                         product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} id=''
                     />

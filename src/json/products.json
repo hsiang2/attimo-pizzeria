@@ -27,7 +27,17 @@
       "image": "/images/img_pizza_2.png",
       "description": "tomato, bell pepper, basil and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "3",
@@ -37,7 +47,17 @@
       "image": "/images/img_pizza_3.png",
       "description": "onion, basil and mozzarella cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "4",
@@ -47,7 +67,17 @@
       "image": "/images/img_pizza_4.png",
       "description": "tomato,basil,olive oil and mozzarella cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "5",
@@ -57,7 +87,17 @@
       "image": "/images/img_pizza_5.png",
       "description": "mushroom, onion, olive, basil and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "6",
@@ -67,7 +107,17 @@
       "image": "/images/img_pizza_6.png",
       "description": "pepperoni, salami, jalapeño and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "7",
@@ -77,7 +127,17 @@
       "image": "/images/img_pizza_7.png",
       "description": "pepperoni,sausage and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "8",
@@ -87,7 +147,17 @@
       "image": "/images/img_pizza_8.png",
       "description": "tomato, basil, black pepper, and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     },
     { 
       "id": "9",
@@ -97,6 +167,16 @@
       "image": "/images/img_pizza_9.png",
       "description": "anchovy, garlic, black olive and cheese",
       "description_long": "bell pepper and chili pizza is a spicy pizza with a kick of flavor from fresh peppers",
-      "countInStock": 10    
+      "countInStock": 10,
+      "ingredients": [{"name": "chili", "image": "/images/icon_chili.png"}, {"name": "bell pepper", "image": "/images/icon_bell_pepper.png"}, {"name": "cheese", "image": "/images/icon_cheese.png"}],
+      "addMore": [
+        {"name": "cheese", "image": "/images/icon_cheese.png", "price": 1.5}, 
+        {"name": "corn", "image": "/images/icon_corn.png", "price": 0.3},
+        {"name": "garlic", "image": "/images/icon_garlic.png", "price": 1.5},
+        {"name": "chili", "image": "/images/icon_chili.png", "price": 0.3},
+        {"name": "carrot", "image": "/images/icon_carrot.png", "price": 0.8},
+        {"name": "broccoli", "image": "/images/icon_broccoli.png", "price": 0.8},
+        {"name": "cabbage", "image": "/images/icon_cabbage.png", "price": 0.8}
+      ]    
     }
 ]
