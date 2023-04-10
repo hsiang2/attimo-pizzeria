@@ -202,7 +202,7 @@
 
 .ingredientActive {
     composes: ingredient;
-    background-image: url(/public/images/bg_ingredient.png);
+    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_ingredient.png?raw=true");
     background-repeat: no-repeat;
     box-shadow: 1px 1px 4px 0 #00000033;
 }
@@ -210,7 +210,7 @@
 .ingredientActiveDark {
     composes: ingredientDark;
 
-    background-image: url(/public/images/bg_ingredient_dark.png);
+    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_ingredient_dark.png?raw=true");
     background-repeat: no-repeat;
     box-shadow: 1px 1px 4px 0 #4A4A4A33;
 }
