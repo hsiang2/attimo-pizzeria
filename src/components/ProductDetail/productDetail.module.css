@@ -216,6 +216,7 @@
 }
 
 .ingredientsIconActive {
+    margin-top: 0.15rem;
     width: 36px;
     height: 36px;
     opacity: 1;
@@ -229,7 +230,7 @@
 }
 
 .ingredientsFontActive {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     margin-bottom: 0;
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 0.8rem;
@@ -249,6 +250,7 @@
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 0.68rem;
     opacity: 0.8;
+    margin: 0;
 }
 
 .ingredientsPrice {

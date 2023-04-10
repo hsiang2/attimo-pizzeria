@@ -42,9 +42,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_pizza_active.png?raw=true" : lightMode ? 
-                                        "https://github.com/hsiang2/movie_image/blob/main/icon_pizza.png?raw=true" : 
-                                        "https://github.com/hsiang2/movie_image/blob/main/icon_pizza_dark.png?raw=true"} 
+                                    src={isActive ? "/images/icon_pizza_active.png" : lightMode ? 
+                                        "/images/icon_pizza.png" : 
+                                        "/images/icon_pizza_dark.png"} 
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -66,9 +66,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_combos_active.png?raw=true" : 
-                                    lightMode ? "https://github.com/hsiang2/movie_image/blob/main/icon_combos.png?raw=true" : 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_combos_dark.png?raw=true"} 
+                                    src={isActive ? "/images/icon_combos_active.png" : 
+                                    lightMode ? "/images/icon_combos.png" : 
+                                    "/images/icon_combos_dark.png"} 
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -91,9 +91,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_pasta_active.png?raw=true" : lightMode ? 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_pasta.png?raw=true" :
-                                     "https://github.com/hsiang2/movie_image/blob/main/icon_pasta_dark.png?raw=true"}
+                                    src={isActive ? "/images/icon_pasta_active.png" : lightMode ? 
+                                    "/images/icon_pasta.png" :
+                                     "/images/icon_pasta_dark.png"}
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -117,9 +117,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_sides_active.png?raw=true" : lightMode ? 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_sides.png?raw=true" : 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_sides_dark.png?raw=true"}
+                                    src={isActive ? "/images/icon_sides_active.png" : lightMode ? 
+                                    "/images/icon_sides.png" : 
+                                    "/images/icon_sides_dark.png"}
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -143,9 +143,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_drinks_active.png?raw=true" : lightMode ? 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_drinks.png?raw=true" : 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_drinks_dark.png?raw=true"}
+                                    src={isActive ? "/images/icon_drinks_active.png" : lightMode ? 
+                                    "/images/icon_drinks.png" : 
+                                    "/images/icon_drinks_dark.png"}
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -169,9 +169,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_soup_active.png?raw=true" : lightMode ? 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_soup.png?raw=true" : 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_soup_dark.png?raw=true"}
+                                    src={isActive ? "/images/icon_soup_active.png" : lightMode ? 
+                                    "/images/icon_soup.png" : 
+                                    "/images/icon_soup_dark.png"}
                                     className={styles.icon}
                                 />
                                 <p className={
@@ -195,9 +195,9 @@ const MenuNav = () => {
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
-                                    src={isActive ? "https://github.com/hsiang2/movie_image/blob/main/icon_dessert_active.png?raw=true" : lightMode ? 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_dessert.png?raw=true" : 
-                                    "https://github.com/hsiang2/movie_image/blob/main/icon_desserts_dark.png?raw=true"}
+                                    src={isActive ? "/images/icon_dessert_active.png" : lightMode ? 
+                                    "/images/icon_dessert.png" : 
+                                    "/images/icon_desserts_dark.png"}
                                     className={styles.icon}
                                 />
                                 <p className={

@@ -26,7 +26,7 @@
     { 
       "id": "2",
       "category": "pizzas",
-      "name": "Teen Spirit",
+      "name": "TEEN SPIRIT",
       "price": 7.50,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_2.png?raw=true",
       "description": "tomato, bell pepper, basil and cheese",
@@ -74,7 +74,7 @@
     { 
       "id": "4",
       "category": "pizzas",
-      "name": "Margherita",
+      "name": "MARGHERITA",
       "price": 8.40,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_4.png?raw=true",
       "description": "tomato,basil,olive oil and mozzarella cheese",
@@ -98,7 +98,7 @@
     { 
       "id": "5",
       "category": "pizzas",
-      "name": "The Hippie",
+      "name": "THE HIPPIE",
       "price": 7.80,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_5.png?raw=true",
       "description": "mushroom, onion, olive, basil and cheese",
@@ -122,7 +122,7 @@
     { 
       "id": "6",
       "category": "pizzas",
-      "name": "Mexican",
+      "name": "MEXICAN",
       "price": 8.50,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_6.png?raw=true",
       "description": "pepperoni, salami, jalapeño and cheese",
@@ -170,7 +170,7 @@
     { 
       "id": "8",
       "category": "pizzas",
-      "name": "Marinara",
+      "name": "MARINARA",
       "price": 8.40,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_8.png?raw=true",
       "description": "tomato, basil, black pepper, and cheese",
@@ -194,7 +194,7 @@
     { 
       "id": "9",
       "category": "pizzas",
-      "name": "Acciughe",
+      "name": "ACCIUGHE",
       "price": 9.20,
       "image": "https://github.com/hsiang2/movie_image/blob/main/img_pizza_9.png?raw=true",
       "description": "anchovy, garlic, black olive and cheese",

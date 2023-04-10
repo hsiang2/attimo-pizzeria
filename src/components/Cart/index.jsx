@@ -56,7 +56,7 @@ const Cart = () => {
                             marginBottom: '4.75rem', marginTop: '4rem'
                         }}
                     >
-                        <img src="https://github.com/hsiang2/movie_image/blob/main/img_empty_cart.png?raw=true" />
+                        <img src="/images/img_empty_cart.png" />
                         <p className={styles.empty} style={{color: lightMode ? '#6E4230' : '#FEF6E0'}}>
                             Your Cart Is Empty 
                         </p>
