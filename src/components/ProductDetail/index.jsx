@@ -10,10 +10,11 @@ import styles from "./productDetail.module.css"
 import { selectCartItems } from "../../redux/cartSlice"
 import { theme } from "antd"
 import { selectLightMode } from "../../redux/colorSLice"
+import EditButton from "../EditButton"
 
 const ProductDetail = ({ product }) => {
     const {
-        token: { colorTextBase, colorPrimary },
+        token: { colorTextBase },
     } = theme.useToken();
     const lightMode = useSelector(selectLightMode)
 
@@ -37,6 +38,15 @@ const ProductDetail = ({ product }) => {
     const [crust, setCrust] = useState(initCrust)
     const [size, setSize] = useState(initSize)
     const [qty, setQty] = useState(initQty)
+
+    useEffect(() => {
+        setRemove(initRemove)
+        setAdd(initAdd)
+        setCrust(initCrust)
+        setSize(initSize)
+        setQty(initQty)
+    }, [product, cartId])
+    
 
     // useEffect(() => {
     //     setRemove(initRemove)
@@ -266,14 +276,20 @@ const ProductDetail = ({ product }) => {
                             Total
                         </h4>
                         <h2 className={styles.totalPrice} style={{color: lightMode ? '#AB3421' : '#F9A784B3'}}>
-                            ${(product.price + add.reduce((n, {price}) => n + price, 0)) * qty}
+                            ${((product.price + add.reduce((n, {price}) => n + price, 0)) * qty).toFixed(2)}
                         </h2>
                     </div>
                 </div>
-                <div style={{display: 'flex', justifyContent: 'end', alignItems: 'center', marginTop: '2rem'}}>
-                    <AddToCartButton 
-                        product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} id=''
-                    />
+                <div style={{display: 'flex', justifyContent: 'end', alignItems: 'center', marginTop: '2rem', marginBottom: '5.6rem'}}>
+                    {!!cartId ? 
+                        <EditButton 
+                            product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} id={cartId}
+                        /> : 
+                        <AddToCartButton 
+                            product={product} qty={qty} crust={crust} size={size} add={add} remove={remove} id=''
+                        />
+                    }
+                    
                 </div>
             </div>
         </div>

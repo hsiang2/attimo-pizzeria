@@ -68,7 +68,7 @@ const Cart = () => {
                     <>
                         {cartItems.map(item => (
                             <li key={item.id} className={styles.item}>
-                                <Link to={`/menu/id/${item.productId}?cartId=${item.id}`}>
+                                <Link to={`/menu/id/${item.productId}?cartId=${item.id}`} onClick={() => setOpen(false)}>
                                    <img className={styles.image} src={item.image} alt={item.name} />
                                 </Link>
                                 <div className={styles.content}>
@@ -77,9 +77,9 @@ const Cart = () => {
                                         <Icon icon="system-uicons:close" className={styles.iconDelete} onClick={() => dispatch(removeCartItems(item.id))}/>
                                     </div>
                                     <div className={styles.custom}>
-                                        <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#FFA69ECC'}} >
+                                        <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#A9A9A9'}} >
                                             size&nbsp;&nbsp;:&nbsp;&nbsp;<strong>{item.size}</strong></p> 
-                                        <p className={styles.title} style={{color: lightMode ? '#779624CC' : '#B6C199'}} >
+                                        <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#A9A9A9'}} >
                                             crust&nbsp;&nbsp;:&nbsp;&nbsp;<strong>{item.crust}</strong></p> 
                                     </div>
                                     <div className={styles.custom}>
@@ -89,7 +89,7 @@ const Cart = () => {
                                             </p>  
                                         }
                                         {item.add.length === 0 ? <></> : 
-                                            <p className={styles.title} style={{color: lightMode ? '#808080CC' : '#A9A9A9'}}>
+                                            <p className={styles.title} style={{color: lightMode ? '#779624CC' : '#B6C199'}}>
                                                 + {item.add.map(x => x.name).join(', ')}
                                             </p>  
                                         }

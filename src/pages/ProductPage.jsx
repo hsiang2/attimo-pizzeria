@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams, useSearchParams } from 'react-router-dom';
 import _ from 'lodash';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -18,6 +18,8 @@ const ProductPage = () => {
      );
     const allProducts = products.filter((x) => x.category == product.category)
     const productIndex = allProducts.indexOf(product)
+    const [searchParams] = useSearchParams()
+    const cartId = searchParams.get('cartId')
 
     const breadcrumbItems = [
         {
@@ -51,23 +53,28 @@ const ProductPage = () => {
                     <div className={`fullWidth ${lightMode ? 'bgProductContent' : 'bgProductContentDark'}`}>
                         <ProductDetail product={product} />
                     </div>
-                    <div className='container' style={{margin: '4.75rem auto 9rem'}}>
-                        <div style={{display: 'flex', width: '6.4rem', marginLeft: 'auto', marginRight: 'auto', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Link to={ productIndex - 1 >= 0 ? `/menu/id/${products[productIndex - 1].id}` : '#'}>
-                                <Icon icon="ic:round-keyboard-arrow-left" 
-                                    style={{fontSize: '1.125rem', color: lightMode ? '#BC854499' : '#D9A44899'}}
-                                />
-                            </Link>
-                            
-                                <h5 style={{fontSize: '0.75rem', color: lightMode ? '#C57D01' : '#D9A448'}}>{productIndex + 1}</h5>
-                            <Link to={ productIndex + 1 < allProducts.length ? `/menu/id/${products[productIndex + 1].id}` : '#'}>
-                                <Icon icon="ic:round-keyboard-arrow-right" 
-                                    style={{fontSize: '1.125rem', color: lightMode ? '#BC854499' : '#D9A44899'}}
-                                />
-                            </Link>
-                            
+                    {!!cartId ? 
+                        <></>
+                        :
+                        <div className='container' style={{margin: '4.75rem auto 9rem'}}>
+                            <div style={{display: 'flex', width: '6.4rem', marginLeft: 'auto', marginRight: 'auto', justifyContent: 'space-between', alignItems: 'center'}}>
+                                <Link to={ productIndex - 1 >= 0 ? `/menu/id/${products[productIndex - 1].id}` : '#'}>
+                                    <Icon icon="ic:round-keyboard-arrow-left" 
+                                        style={{fontSize: '1.125rem', color: lightMode ? '#BC854499' : '#D9A44899'}}
+                                    />
+                                </Link>
+                                
+                                    <h5 style={{fontSize: '0.75rem', color: lightMode ? '#C57D01' : '#D9A448'}}>{productIndex + 1}</h5>
+                                <Link to={ productIndex + 1 < allProducts.length ? `/menu/id/${products[productIndex + 1].id}` : '#'}>
+                                    <Icon icon="ic:round-keyboard-arrow-right" 
+                                        style={{fontSize: '1.125rem', color: lightMode ? '#BC854499' : '#D9A44899'}}
+                                    />
+                                </Link>
+                                
+                            </div>
                         </div>
-                    </div>
+                    }
+                    
                     {/* <ProductList products={_products} /> */}
                 </div>
                 <Footer className="layoutFooter" />
