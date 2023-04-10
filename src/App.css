@@ -1,10 +1,10 @@
 /* General Styles */
 /* RWD Container */
 .slick-prev:before {
-  content: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/icon_arrow_l.png?raw=true");
+  content: url("https://github.com/hsiang2/movie_image/blob/main/icon_arrow_l.png?raw=true");
 }
 .slick-next:before {
-  content: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/icon_arrow_r.png?raw=true");
+  content: url("https://github.com/hsiang2/movie_image/blob/main/icon_arrow_r.png?raw=true");
 }
 
 .ant-segmented .ant-segmented-item-selected {
@@ -53,7 +53,7 @@
   min-width: 100%;
   min-height: 100%;
 
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_sm.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_sm.png?raw=true");
   background-color: #F9EED9;
   background-position: center center;
   background-size: cover;
@@ -63,7 +63,7 @@
 .bgMenuDark {
   min-width: 100%;
   min-height: 100%;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_sm_dark.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_sm_dark.png?raw=true");
   background-color: #F9EED9;
   background-position: center center;
   background-size: cover;
@@ -73,7 +73,7 @@
 .bgHomeDark {
   min-width: 100%;
   min-height: 100%;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_sm_dark.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_sm_dark.png?raw=true");
   background-color: #100C09;
   background-position: center center;
   background-size: cover;
@@ -84,7 +84,7 @@
   min-width: 100%;
   min-height: 100%;
 
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_sm.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_sm.png?raw=true");
   background-color: #F9EED9;
   background-position: center center;
   background-size: cover;
@@ -98,7 +98,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_sm.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_sm.png?raw=true");
 }
 
 .bgProductDark {
@@ -108,7 +108,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_sm_dark.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_sm_dark.png?raw=true");
 }
 .bgProductContent {
   min-width: 100%;
@@ -119,7 +119,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_sm.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_sm.png?raw=true");
   box-shadow: 0 6px 40px #826E4B21;
 }
 .bgProductContentDark {
@@ -129,7 +129,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_sm_dark.png?raw=true");
+  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_sm_dark.png?raw=true");
   box-shadow: 0 6px 40px #826E4B21;
 }
 
@@ -330,33 +330,33 @@ button {
   }
 
   .bgMenu {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_md.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_md.png?raw=true");
   }
   .bgMenuDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_md_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_md_dark.png?raw=true");
   }
   .bgHome {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_md.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_md.png?raw=true");
   }
 
   .bgHomeDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_md_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_md_dark.png?raw=true");
   }
   .bgProduct {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_md.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_md.png?raw=true");
   }
   .icon {
     font-size: 1.5rem;
   }
   .bgProductDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_md_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_md_dark.png?raw=true");
   }
   .bgProductContent {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_md.png?raw=true.png");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_md.png?raw=true.png");
     /* max-height: 829px; */
   }
   .bgProductContentDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_md_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_md_dark.png?raw=true");
   }
 }
 
@@ -365,32 +365,32 @@ button {
     width: 960px;
   }
   .bgHome {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_lg.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_lg.png?raw=true");
   }
   .bgHomeDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_home_lg_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_lg_dark.png?raw=true");
   }
   .bgMenu {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_lg.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_lg.png?raw=true");
   }
   .bgMenuDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_menu_lg_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_lg_dark.png?raw=true");
   }
   .bgProduct {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_lg.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_lg.png?raw=true");
   }
   .icon {
     font-size: 1.75rem;
   }
   .bgProductDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_lg_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_lg_dark.png?raw=true");
   }
   .bgProductContent {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_lg.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_lg.png?raw=true");
     /* max-height: 746px; */
   }
   .bgProductContentDark {
-    background-image: url("https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/bg_product_content_lg_dark.png?raw=true");
+    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_lg_dark.png?raw=true");
   }
 }
 

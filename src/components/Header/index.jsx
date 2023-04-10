@@ -34,7 +34,7 @@ const Header = () => {
                     />
                     <div className={styles.halfNav}>
                         <Link to="/">
-                            <img src={lightMode ?  "https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/img_logo.png?raw=true" : "https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/img_logo_dark.png?raw=true"} alt="logo" className={styles.logoSize}/>
+                            <img src={lightMode ?  "https://github.com/hsiang2/movie_image/blob/main/img_logo.png?raw=true" : "https://github.com/hsiang2/movie_image/blob/main/img_logo_dark.png?raw=true"} alt="logo" className={styles.logoSize}/>
                         </Link>
                         <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                     </div>

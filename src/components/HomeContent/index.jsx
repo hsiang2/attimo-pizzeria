@@ -23,12 +23,12 @@ const HomeContent = () => {
                         >
                         Time Flies When You’re Eating Pies</p>
                     </div>
-                    <img src='https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/img_header.png?raw=true' alt='pizza' className={styles.bannerImage} />
+                    <img src='https://github.com/hsiang2/movie_image/blob/main/img_header.png?raw=true' alt='pizza' className={styles.bannerImage} />
                 </div>
             </div>
             
             <div className={styles.story}>
-                <img src='https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/img_pizza_home_1.png?raw=true' alt='pizza' className={styles.storyImage} />
+                <img src='https://github.com/hsiang2/movie_image/blob/main/img_pizza_home_1.png?raw=true' alt='pizza' className={styles.storyImage} />
                 <div className={styles.storyContent}>
                     <h1 style={{color: colorPrimary}} className={styles.title}>Our Story</h1>
                     <p className={styles.description} style={{color: lightMode ? "#6C6139": "#DAD7CD"}}>Attimo is derived from the Italian language, which means "moment".</p>
@@ -53,7 +53,7 @@ const HomeContent = () => {
                         </Link>   
                     </div>
                 </div>
-                <img src='https://github.com/hsiang2/attimo-pizzeria/blob/master/public/images/img_pizza_home_2.png?raw=true' alt='pizza' className={styles.ingredientsImage} />
+                <img src='https://github.com/hsiang2/movie_image/blob/main/img_pizza_home_2.png?raw=true' alt='pizza' className={styles.ingredientsImage} />
             </div>
             <IngredientsList ingredients={ingredients} speed={50000} />
             <div className={styles.bottomButton}>
