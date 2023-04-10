@@ -21,7 +21,7 @@ const Footer = () => {
                     <footer className={styles.footer}>
                         <div className={styles.logo}>
                             <Link to="/">
-                                <img src={lightMode ? "https://github.com/hsiang2/movie_image/blob/main/img_logo_footer.png?raw=true" : "https://github.com/hsiang2/movie_image/blob/main/img_logo_footer_dark.png?raw=true"} alt="logo" className={styles.logoSize} />
+                                <img src={lightMode ? "/images/img_logo_footer.png" : "/images/img_logo_footer_dark.png"} alt="logo" className={styles.logoSize} />
                             </Link>
                         </div>
                         <div className={styles.content}>
