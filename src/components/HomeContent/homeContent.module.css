@@ -80,9 +80,9 @@
 }
 
 @media (min-width: 768px) {
-    .bgHeader {
+    /* .bgHeader {
         background-image: url("/public/images/bg_home_header_md.png");
-    }
+    } */
     .banner {
         margin: 10.5rem 0 30rem;
     }
@@ -137,9 +137,9 @@
 }
   
 @media (min-width: 992px) {
-    .bgHeader {
+    /* .bgHeader {
         background-image: url("/public/images/bg_home_header_lg.png");
-    }
+    } */
     .banner {
         margin: 9.8rem 0 19rem;
     }

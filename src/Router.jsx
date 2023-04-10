@@ -7,7 +7,7 @@ import OurStoryPage from './pages/OurStoryPage'
 import ContactPage from './pages/ContactPage'
 import { ConfigProvider } from 'antd'
 import { useSelector } from 'react-redux'
-import { selectLightMode } from "./redux/colorSLice";
+import { selectLightMode } from "./redux/colorSlice";
 import { darkTheme, lightTheme } from './theme'
 import { HelmetProvider } from 'react-helmet-async'
 
