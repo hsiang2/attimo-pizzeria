@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useSelector } from 'react-redux'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -10,6 +11,7 @@ const HomePage = () => {
     return (
         <>
             <div className={`mainLayout ${lightMode ? 'bgHome' : 'bgHomeDark'} `}>
+                <Helmet><title>Attimo Pizzeria</title></Helmet>
                 <div className="layoutHeader fullWidth" >
                     <Header />
                 </div>

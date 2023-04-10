@@ -9,6 +9,7 @@ import { ConfigProvider } from 'antd'
 import { useSelector } from 'react-redux'
 import { selectLightMode } from "./redux/colorSLice";
 import { darkTheme, lightTheme } from './theme'
+import { HelmetProvider } from 'react-helmet-async'
 
 
 const Router = () => {
@@ -16,18 +17,21 @@ const Router = () => {
     const theme = lightMode ? lightTheme : darkTheme
     return(
         <ConfigProvider theme={theme}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='menu'>
-                        <Route path='category/:categoryName' element={<MenuPage />} />
-                        <Route path='id/:productId' element={<ProductPage />} />
-                    </Route>
-                    <Route path='contact' element={<ContactPage />}/>
-                    <Route path='ourstory' element={<OurStoryPage />}/>
-                    <Route path='findus' element={<FindUsPage />}/>
-                </Routes>
-            </BrowserRouter>
+            <HelmetProvider context={{}}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='menu'>
+                            <Route path='category/:categoryName' element={<MenuPage />} />
+                            <Route path='id/:productId' element={<ProductPage />} />
+                        </Route>
+                        <Route path='contact' element={<ContactPage />}/>
+                        <Route path='ourstory' element={<OurStoryPage />}/>
+                        <Route path='findus' element={<FindUsPage />}/>
+                    </Routes>
+                </BrowserRouter>
+            </HelmetProvider>
+            
         </ConfigProvider>
         
     )

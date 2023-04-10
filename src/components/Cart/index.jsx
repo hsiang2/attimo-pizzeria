@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom";
-import { Badge, Button, Drawer, theme } from "antd"
-import { useEffect, useState } from "react";
+import { Badge, Drawer, theme } from "antd"
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, editCartItems, removeCartItems, selectCartItems } from '../../redux/cartSlice'
 import { selectLightMode } from '../../redux/colorSlice'

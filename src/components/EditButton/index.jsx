@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { notification } from "antd";
-import { addCartItems, editCartItems } from "../../redux/cartSlice";
-import uniqueId from 'lodash/uniqueId';
+import { editCartItems } from "../../redux/cartSlice";
 import { selectLightMode } from "../../redux/colorSLice";
 
 const EditButton = ({ product, qty, crust, size, add, remove, id }) => {

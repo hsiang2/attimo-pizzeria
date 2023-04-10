@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer'
@@ -18,6 +19,7 @@ const MenuPage = () => {
     return (
         
         <div className={lightMode ? 'bgMenu' : 'bgMenuDark'}>
+            <Helmet><title>Attimo Pizzeria | Menu</title></Helmet>
             <div className="mainLayout">
                 
                 <div className={`layoutHeader fullWidth ${lightMode ? 'bgHeader' : 'bgHeaderDark'}`} >

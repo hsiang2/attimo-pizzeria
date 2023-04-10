@@ -3,13 +3,13 @@ import _ from 'lodash';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MenuNav from '../components/MenuNav'
-import ProductList from '../components/ProductList';
 import products from '../json/products.json'
 import { Breadcrumb } from 'antd';
 import ProductDetail from '../components/ProductDetail';
 import { useSelector } from 'react-redux';
 import { selectLightMode } from '../redux/colorSLice';
 import { Icon } from '@iconify/react';
+import { Helmet } from 'react-helmet-async';
 
 const ProductPage = () => {
     const { productId } = useParams()
@@ -40,6 +40,7 @@ const ProductPage = () => {
     return (
         
         <div className={lightMode ? 'bgProduct' : 'bgProductDark'}>
+            <Helmet><title>Attimo Pizzeria | {product.name}</title></Helmet>
             <div className="mainLayout">
                 
                 <div className={`layoutHeader fullWidth ${lightMode ? 'bgHeader' : 'bgHeaderDark'}`} >
