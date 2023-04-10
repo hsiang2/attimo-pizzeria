@@ -1,58 +1,72 @@
 [
     {
         "name": "olive",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/olive.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/olive.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/olive_dark.png?raw=true"
     },
     {
         "name": "basil",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/basil.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/basil.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/basil_dark.png?raw=true"
     },
     {
         "name": "cheese",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/cheese.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/cheese.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/cheese_dark.png?raw=true"
     },
     {
         "name": "tomato",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/tomato.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/tomato.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/tomato_dark.png?raw=true"
     },
     {
         "name": "mushroom",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/mushroom.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/mushroom.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/mushroom_dark.png?raw=true"
     },
     {
         "name": "shellfish",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/shellfish.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/shellfish.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/shellfish_dark.png?raw=true"
     },
     {
         "name": "bell pepper",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/bell-pepper.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/bell-pepper.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/bell pepper_dark.png?raw=true"
     },
     {
         "name": "garlic",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/garlic.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/garlic.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/garlic_dark.png?raw=true"
     },
     {
         "name": "pineapple",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/pineapple.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/pineapple.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/pineapple_dark.png?raw=true"
     },
     {
         "name": "onion",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/onion.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/onion.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/onion_dark.png?raw=true"
     },
     {
         "name": "sausage",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/sausage.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/sausage.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/sausage_dark.png?raw=true"
     },
     {
         "name": "anchovy",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/anchovy.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/anchovy.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/anchovy_dark.png?raw=true"
     },
     {
         "name": "avocado",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/avocado.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/avocado.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/avocado_dark.png?raw=true"
     },
     {
         "name": "corn",
-        "image": "https://github.com/hsiang2/movie_image/blob/main/corn.png?raw=true"
+        "image": "https://github.com/hsiang2/movie_image/blob/main/corn.png?raw=true",
+        "imageD": "https://github.com/hsiang2/movie_image/blob/main/corn_dark.png?raw=true"
     }
 ]
