@@ -34,8 +34,6 @@ const AddToCartButton = ({ product, qty, crust, size, add, remove, id }) => {
         size,
         add,
         remove
-        // countInStock: product.countInStock,
-        // qty,
       }))
     };
 

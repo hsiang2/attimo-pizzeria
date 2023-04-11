@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react"
 import { Segmented, } from "antd"
 import { useState, useEffect } from "react"
 import Slider from "react-slick"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { useSearchParams } from "react-router-dom"
 import AddToCartButton from "../AddToCartButton"
 import styles from "./productDetail.module.css"
@@ -22,11 +22,11 @@ const ProductDetail = ({ product }) => {
 
     const [searchParams] = useSearchParams()
     const cartId = searchParams.get('cartId')
-    const dispatch = useDispatch()
+
     const cartItems = useSelector(selectCartItems)
 
     const item = !!cartId ? cartItems.find(x => x.id == cartId) : null
-    // console.log(cartId)
+
     const initQty = item != null ? item.qty : 1
     const initRemove = item != null ? item.remove : []
     const initAdd = item != null ? item.add : []
@@ -46,15 +46,6 @@ const ProductDetail = ({ product }) => {
         setSize(initSize)
         setQty(initQty)
     }, [product, cartId])
-    
-
-    // useEffect(() => {
-    //     setRemove(initRemove)
-    //     setAdd(initAdd)
-    //     setCrust(initCrust)
-    //     setSize(initSize)
-    //     setQty(initQty)
-    //  }, [initQty, initRemove, initAdd, initCrust, initSize])
 
     const clickRemove = (option) => {
         const index = remove.indexOf(option)
@@ -167,7 +158,6 @@ const ProductDetail = ({ product }) => {
 
     return(
         <div className={styles.bg}>
-       {/* <div className={styles.bg}></div>      */}
             <div className={styles.info}>
                 <img src={product.image} />
                 <h2 className={styles.name} style={{color: colorTextBase}}>{product.name}</h2>

@@ -17,8 +17,6 @@ const ProductList = ({ products }) => {
             ))}
         </Row>
     )
-        
-    
 }
 
 export default ProductList

@@ -19,13 +19,8 @@ const cartSlice = createSlice({
                 )
             })
             if(product !== -1) {
-                // console.log(product)
                 state.cartItems[product].qty += item.qty
-                // const cartItems = state.cartItems.map(
-                //     (x) => x.id === product.id ? item : x
-                // )
             } else {
-                // console.log(product)
                 state.cartItems = [...state.cartItems, item]
             }
         },
@@ -40,12 +35,6 @@ const cartSlice = createSlice({
         clearCart: (state, action) => {
             state.cartItems = []
         },
-        // getCartItem: (state, action) => {
-        //     const id = action.payload
-        //     const item = state.cartItems.find((x) =>x.id == id)
-        //     console.log(item)
-        //     return(item)
-        // },
     }
 })
 

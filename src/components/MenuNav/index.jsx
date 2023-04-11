@@ -1,5 +1,3 @@
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import { selectLightMode } from "../../redux/colorSlice";
@@ -35,10 +33,7 @@ const MenuNav = () => {
     return (
         <div className={styles.wrapper}>
             <Slider {...settings} >
-                    <NavLink to="/menu/category/pizzas"
-                        // className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/pizzas">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -59,10 +54,7 @@ const MenuNav = () => {
                             </div>
                         )}
                     </NavLink>
-                    <NavLink to="/menu/category/combos"
-                        // className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/combos">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -84,10 +76,7 @@ const MenuNav = () => {
                             </div>
                         )}
                     </NavLink>
-                    <NavLink to="/menu/category/pasta"
-                        // className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/pasta">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -110,10 +99,7 @@ const MenuNav = () => {
                         )}
                         
                     </NavLink>
-                    <NavLink to="/menu/category/sides"
-                        //className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/sides">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -136,10 +122,7 @@ const MenuNav = () => {
                         )}
                         
                     </NavLink>
-                    <NavLink to="/menu/category/drinks"
-                        //className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/drinks">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -162,10 +145,7 @@ const MenuNav = () => {
                         )}
                         
                     </NavLink>
-                    <NavLink to="/menu/category/soup"
-                        //className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/soup">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 
@@ -188,10 +168,7 @@ const MenuNav = () => {
                         )}
                         
                     </NavLink>
-                    <NavLink to="/menu/category/desserts"
-                        //className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}
-                        
-                    >
+                    <NavLink to="/menu/category/desserts">
                         {({ isActive }) => (
                             <div className={styles.navItem}>
                                 <img 

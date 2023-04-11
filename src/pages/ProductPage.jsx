@@ -75,8 +75,6 @@ const ProductPage = () => {
                             </div>
                         </div>
                     }
-                    
-                    {/* <ProductList products={_products} /> */}
                 </div>
                 <Footer className="layoutFooter" />
             </div>
