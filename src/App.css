@@ -66,7 +66,7 @@
 .bgHomeDark {
   min-width: 100%;
   min-height: 100%;
-  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_sm_dark.png?raw=true");
+  background-image: url("/images/bg_home_sm_dark.png");
   background-color: #100C09;
   background-position: center center;
   background-size: cover;
@@ -77,7 +77,7 @@
   min-width: 100%;
   min-height: 100%;
 
-  background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_sm.png?raw=true");
+  background-image: url("/images/bg_home_sm.png");
   background-color: #F9EED9;
   background-position: center center;
   background-size: cover;
@@ -311,11 +311,11 @@ button {
     background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_md_dark.png?raw=true");
   }
   .bgHome {
-    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_md.png?raw=true");
+    background-image: url("/images/bg_home_md.png");
   }
 
   .bgHomeDark {
-    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_md_dark.png?raw=true");
+    background-image: url("/images/bg_home_md_dark.png");
   }
   .bgProduct {
     background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_md.png?raw=true");
@@ -339,10 +339,10 @@ button {
     width: 960px;
   }
   .bgHome {
-    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_lg.png?raw=true");
+    background-image: url("/images/bg_home_lg.png");
   }
   .bgHomeDark {
-    background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_home_lg_dark.png?raw=true");
+    background-image: url("/images/bg_home_lg_dark.png");
   }
   .bgMenu {
     background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_menu_lg.png?raw=true");
@@ -384,5 +384,5 @@ button {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+}*/
 
