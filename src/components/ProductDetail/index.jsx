@@ -12,7 +12,7 @@ import { theme } from "antd"
 import { selectLightMode } from "../../redux/colorSlice"
 import EditButton from "../EditButton"
 
-const ProductDetail = ({ product }) => {
+const ProductDetail = ({ product, isLoading }) => {
     const {
         token: { colorTextBase },
     } = theme.useToken();
@@ -175,7 +175,7 @@ const ProductDetail = ({ product }) => {
                 
                 <div className={styles.ingredientsWrapper}>
                 <Slider {...settings} style={styles.slider}>
-                    {product.ingredients.map(ingredient => (
+                    {product.ingredients?.map(ingredient => (
                         <RemoveOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={remove.includes(ingredient)} onClick={clickRemove} 
@@ -208,7 +208,7 @@ const ProductDetail = ({ product }) => {
                 </div>
                 <div className={styles.ingredientsWrapper}>
                 <Slider ref={slider} {...settings}>
-                    {product.addMore.map(ingredient => (
+                    {product.addMore?.map(ingredient => (
                         <AddOption 
                             key={ingredient.name} ingredient={ingredient} 
                             selected={add.includes(ingredient)} onClick={clickAdd} 

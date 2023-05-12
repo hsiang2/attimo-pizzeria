@@ -5,17 +5,19 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MenuNav from '../components/MenuNav'
 import ProductList from '../components/ProductList';
-import products from '../json/products.json'
+// import products from '../json/products.json'
 import { selectLightMode } from '../redux/colorSlice';
+import { useProductsByCategory } from '../react-query';
 
 const MenuPage = () => {
     const { categoryName } = useParams()
-    const _products = products.filter(
-        x => x?.category.toUpperCase() === categoryName.toUpperCase()
-      );
-    
+    // const _products = products.filter(
+    //     x => x?.category.toUpperCase() === categoryName.toUpperCase()
+    //   ); 
     const lightMode = useSelector(selectLightMode)
-    
+    const { data, isLoading } = useProductsByCategory(categoryName)
+    const products = data || []
+
     return (
         
         <div className={lightMode ? 'bgMenu' : 'bgMenuDark'}>
@@ -27,7 +29,7 @@ const MenuPage = () => {
                 </div>
                 <div className="layoutContent container">
                     <MenuNav />
-                    <ProductList products={_products} />
+                    <ProductList products={products} isLoading={isLoading} />
                 </div>
                 <Footer className="layoutFooter" />
             </div>
