@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { selectLightMode, setColorMode } from "../../redux/colorSlice"
 import { theme } from "antd"
 import Link from '../Link'
+import UserButton from '../UserButton'
 
 
 const Header = () => {
@@ -40,9 +41,10 @@ const Header = () => {
                     </div>
                     
                     <div className={styles.halfNav}>
-                        <Link to="/" className={styles.icon}>
+                        <UserButton />
+                        {/* <Link to="/" className={styles.icon}>
                             <Icon icon="ph:user-circle" className='icon' />
-                        </Link>
+                        </Link> */}
                         <Cart />
                     </div>
                 </div>

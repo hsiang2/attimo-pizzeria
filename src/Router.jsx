@@ -5,11 +5,14 @@ import MenuPage from './pages/MenuPage'
 import ProductPage from './pages/ProductPage'
 import OurStoryPage from './pages/OurStoryPage'
 import ContactPage from './pages/ContactPage'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 import { ConfigProvider } from 'antd'
 import { useSelector } from 'react-redux'
 import { selectLightMode } from "./redux/colorSlice";
 import { darkTheme, lightTheme } from './theme'
 import { HelmetProvider } from 'react-helmet-async'
+import ProfilePage from './pages/ProfilePage'
 
 
 const Router = () => {
@@ -24,6 +27,11 @@ const Router = () => {
                         <Route path='menu'>
                             <Route path='category/:categoryName' element={<MenuPage />} />
                             <Route path='id/:productId' element={<ProductPage />} />
+                        </Route>
+                        <Route path='auth'>
+                            <Route path='login' element={<LoginPage />} />
+                            <Route path='register' element={<RegisterPage />} />
+                            <Route path='profile' element={<ProfilePage />} />
                         </Route>
                         <Route path='contact' element={<ContactPage />}/>
                         <Route path='ourstory' element={<OurStoryPage />}/>
