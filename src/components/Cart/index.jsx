@@ -1,13 +1,16 @@
 import { Icon } from "@iconify/react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Badge, Drawer, theme } from "antd"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, editCartItems, removeCartItems, selectCartItems } from '../../redux/cartSlice'
 import { selectLightMode } from '../../redux/colorSlice'
 import styles from './cart.module.css'
+import { useUserInfo } from "../../react-query"
 
 const Cart = () => {
+    const { data: userInfo } = useUserInfo()
+
     const {
         token: { colorPrimary, colorTextBase, colorBgBase },
       } = theme.useToken();
@@ -21,6 +24,8 @@ const Cart = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector(selectCartItems)
 
+    const navigate = useNavigate()
+
     const getTotalPrice = () => {
         return (cartItems.length > 0) ?
            cartItems.reduce((sum, item) => sum + (item.price + item.add.reduce((n, {price}) => n + price, 0)) * item.qty, 0)
@@ -29,6 +34,14 @@ const Cart = () => {
      const count = (cartItems.length > 0)
      ? cartItems.reduce((sum, item) => sum + item.qty, 0)
      : 0;
+
+     const checkoutHandler = ()  => {
+        onClose()
+        if(userInfo?.name)
+            navigate("/shopping/shipping")
+        else 
+            navigate("/auth/login?redirect=/shopping/shipping")
+     }
      
     return(
         <>
@@ -63,6 +76,9 @@ const Cart = () => {
                         <p className={styles.emptyText} style={{color: lightMode ? '#6E423066' : '#FEF6E08C'}}>
                             Looks like you haven’t added anything to your cart yet
                         </p>
+                        <Link to="/menu/category/pizzas" className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}>
+                            <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>ORDER NOW</h4>
+                        </Link>
                     </div>
                 ) : (
                     <>
@@ -162,11 +178,11 @@ const Cart = () => {
                                 <div className={styles.totalPrice}>${getTotalPrice().toFixed(2)}</div>
                             </div>
                         </div>
+                        <button onClick={checkoutHandler} className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}>
+                            <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>ORDER NOW</h4>
+                        </button>
                     </>
                 )}      
-                <div className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}>
-                    <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>CHECKOUT</h4>
-                </div>
             </Drawer>
         </>
     )

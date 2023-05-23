@@ -13,6 +13,9 @@ import { selectLightMode } from "./redux/colorSlice";
 import { darkTheme, lightTheme } from './theme'
 import { HelmetProvider } from 'react-helmet-async'
 import ProfilePage from './pages/ProfilePage'
+import PlaceOrderPage from './pages/PlaceOrderPage'
+import PaymentPage from './pages/PaymentPage'
+import ShippingPage from './pages/ShippingPage'
 
 
 const Router = () => {
@@ -32,6 +35,11 @@ const Router = () => {
                             <Route path='login' element={<LoginPage />} />
                             <Route path='register' element={<RegisterPage />} />
                             <Route path='profile' element={<ProfilePage />} />
+                        </Route>
+                        <Route path='shopping'>
+                            <Route path='shipping' element={<ShippingPage />} />
+                            <Route path='payment' element={<PaymentPage />} />
+                            <Route path='placeorder' element={<PlaceOrderPage />} />
                         </Route>
                         <Route path='contact' element={<ContactPage />}/>
                         <Route path='ourstory' element={<OurStoryPage />}/>
