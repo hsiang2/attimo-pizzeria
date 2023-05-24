@@ -90,8 +90,6 @@ export const register = async ({ name, email, password })  => {
 
 }
 
-
-
 export const getUserInfo = async () => {
     const storedUser = localStorage.getItem("user")
     const user = auth?.currentUser || JSON.parse(storedUser) || null
@@ -124,4 +122,28 @@ export const updateUserInfo = async ({ name, adrs, tel, uid }) => {
 export const logout = async () => {
     await auth.signOut()
     localStorage.removeItem("user")
+}
+
+export const addOrder = async (order) => {
+    const storedUser = localStorage.getItem("user")
+    const user = auth?.currentUser || JSON.parse(storedUser)
+    // localStorage.setItem("or", JSON.stringify(order))
+    const docRef = doc(collection(db, "orders"))
+    await setDoc( docRef, { ...order, user: user.uid, id: docRef.id })
+}
+
+export const getMyOrders = async () => {
+    const storedUser = localStorage.getItem("user")
+    const user = auth?.currentUser || JSON.parse(storedUser)
+
+    const q = await query(
+        collection(db, "orders"),
+        where("user", "==", user.uid)
+    )
+    let querySnapshot = await getDocs(q)
+    let result = []
+    querySnapshot.forEach(async (product) => {
+        await result.push(product.data())
+    })
+    return result
 }

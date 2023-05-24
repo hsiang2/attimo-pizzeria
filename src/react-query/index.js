@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
-import { getProductById, getProducts, getProductsByCategory, getUserInfo, login, logout, register, updateUserInfo } from "../api"
+import { addOrder, getMyOrders, getProductById, getProducts, getProductsByCategory, getUserInfo, login, logout, register, updateUserInfo } from "../api"
 
 export const useProducts = () => {
     const { data, isLoading } = useQuery([], getProducts)
@@ -60,3 +60,27 @@ export const useLogout = () => {
         }
     })
 }
+
+
+
+export const useOrders = () => {
+    return useQuery({
+        queryKey: ["orders"],
+        queryFn: getMyOrders,
+        initialData: []
+    })
+}
+
+export const useAddOrder = () => {
+    const queryClient = useQueryClient()
+    return useMutation(addOrder, {
+        onSuccess: () => {
+            queryClient.invalidateQueries(["orders"])
+        }
+    })
+}
+
+// export const useOrders = () => {
+//     const { data, isLoading } = useQuery([], getMyOrders)
+//     return { data, isLoading }
+// }

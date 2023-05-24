@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage"
 import thunk from "redux-thunk"
 import cartReducer from "./cartSlice"
 import colorReducer from './colorSlice'
+// import orderReducer from "./orderSlice"
 
 const persistConfig = {
     key: 'shoppingCart',
@@ -17,7 +18,8 @@ const persistedColorReducer = persistReducer(persistConfig, colorReducer);
 export const store = configureStore({
     reducer: {
         cart: persistedCartReducer,
-        color: persistedColorReducer
+        color: persistedColorReducer,
+        // order: orderReducer
     },
     devTools: process.env.NODE_ENV !== 'production',
     middleware: [thunk] 

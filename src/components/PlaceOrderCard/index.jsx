@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { savePrice, saveShippingAddress, selectCartItems, selectPaymentMethod, selectShippingAddress } from "../../redux/cartSlice"
+import { clearCart, savePrice, saveShippingAddress, selectCartItems, selectPaymentMethod, selectShippingAddress } from "../../redux/cartSlice"
 import { Button, Col, Form, Input, Row } from "antd"
+import { addOrder } from "../../api"
+import { useAddOrder } from "../../react-query"
 
 
 const PlaceOrderCard = () => {
@@ -11,10 +13,35 @@ const PlaceOrderCard = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    const { mutate, error, isLoading, isError, isSuccess, data } = useAddOrder()
+
     const placeOrderHandler = () => {
-        dispatch(savePrice({
-            itemsPrice, shippingPrice, taxPrice, totalPrice
-        }))
+
+        // dispatch(savePrice({
+        //     itemsPrice, shippingPrice, taxPrice, totalPrice
+        // }))
+        // addOrder({ 
+        //     fullName: shippingAddress.fullName,
+        //     address: shippingAddress.address,
+        //     paymentMethod,
+        //     cartItems,
+        //     itemsPrice, 
+        //     shippingPrice, 
+        //     taxPrice, 
+        //     totalPrice 
+        // })
+        mutate({
+            fullName: shippingAddress.fullName,
+            address: shippingAddress.address,
+            paymentMethod,
+            cartItems,
+            itemsPrice, 
+            shippingPrice, 
+            taxPrice, 
+            totalPrice 
+        })
+        
+        dispatch(clearCart())
         navigate('/auth/profile')
     }
 
@@ -43,8 +70,8 @@ const PlaceOrderCard = () => {
                     <p>
                         <strong>Name:</strong> {shippingAddress.fullName} <br />
                         <strong>Address: </strong> {shippingAddress.address},
-                        {shippingAddress.city}, {shippingAddress.postalCode}
-                        ,{shippingAddress.country}
+                        {/* {shippingAddress.city}, {shippingAddress.postalCode}
+                        ,{shippingAddress.country} */}
                     </p>
                 </div>
                 <div className="card card-body">
