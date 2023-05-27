@@ -75,7 +75,7 @@ export const login = async ({ email, password }) => {
     localStorage.setItem("user", JSON.stringify(user))
 }
 
-export const register = async ({ name, email, password })  => {
+export const register = async ({ firstName, lastName, email, password })  => {
     const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -85,7 +85,7 @@ export const register = async ({ name, email, password })  => {
     localStorage.setItem("user", JSON.stringify(user))
     const docRef = doc(db, "users", user.uid)
     await setDoc(docRef, {
-        name
+        firstName, lastName
     })
 
 }

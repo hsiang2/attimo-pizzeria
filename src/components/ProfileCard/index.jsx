@@ -28,7 +28,7 @@ const ProfileCard = ({ redirect }) => {
 
     return (
         <Form
-            style={{marginTop: "10rem"}}
+            // style={{marginTop: "10rem"}}
             onFinish={onUpdate}
             name="normal_login"
             className={styles.profileForm}

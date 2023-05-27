@@ -6,7 +6,7 @@ const Orders = () => {
     // const orders = data || []
     return (
         orders.map((order) =>
-            <div>
+            <div key={order.id}>
                 <div>{order.id}</div>
             </div>
         )

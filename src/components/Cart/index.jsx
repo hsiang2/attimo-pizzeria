@@ -40,7 +40,7 @@ const Cart = () => {
         if(userInfo?.name)
             navigate("/shopping/shipping")
         else 
-            navigate("/auth/login?redirect=/shopping/shipping")
+            navigate("/auth?redirect=/shopping/shipping")
      }
      
     return(

@@ -1,5 +1,32 @@
-.loginForm {
 
+.loginForm {
+  
+  /* padding: 1rem; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  max-width: 17.25rem;
+}
+
+.button {
+  margin-top: 2.5rem;
+  width: 7rem;
+  height: 2.375rem;
+}
+
+@media (min-width: 768px) {
+  .loginForm {
+    max-width: 20rem;
+  }
+
+  .button {
+    width: 8.75rem;
+    height: 2.375rem;
+  }
+}
+
+/* .loginForm {
+    
     padding: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -48,4 +75,4 @@
     margin-top: 0;
     font-size: 0.5rem;
   }
-  
+   */

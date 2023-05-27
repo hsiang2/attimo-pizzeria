@@ -1,12 +1,18 @@
-import { Button, Checkbox, Form, Input } from "antd"
+import { Button, Checkbox, Form, Input, Space, theme } from "antd"
 import { useRegisterWithEmailPassword } from "../../react-query"
 import { useNavigate, Link } from "react-router-dom"
 import { useEffect } from "react"
 
 import styles from "./registerCard.module.css"
 import { Icon } from "@iconify/react"
+import { useSelector } from "react-redux"
+import { selectLightMode } from "../../redux/colorSlice"
 
 const RegisterCard = ({ redirect }) => {
+    const {
+        token: { colorPrimary },
+    } = theme.useToken();
+    const lightMode = useSelector(selectLightMode)
     const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword()
 
     const [form] = Form.useForm()
@@ -25,30 +31,63 @@ const RegisterCard = ({ redirect }) => {
 
     return(
         <Form
-            style={{marginTop: "10rem"}}
+            requiredMark={false}
             form={form}
             name="register"
             onFinish={onFinish}
             className={styles.registerForm}
             scrollToFirstError
+            layout="vertical"
         >
-            <Form.Item
-                name="name"
-                label="Your Name"
-                tooltip="What do you want others to call you?"
-                rules={[
-                    {
-                        required: true,
-                        message: "Please input your name!",
-                        whitespace: true
-                    }
-                ]}
+            
+            <Form.Item 
+                label="FULL NAME"
+                style={{
+                    margin: 0,
+                    fontFamily: 'Alegreya Sans',
+                    fontWeight: 'bold',
+                    fontSize: '1rem',
+                }}
             >
-                <Input />
+                <Form.Item
+                    name="firstName"
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please input your first name!",
+                            whitespace: true
+                        }
+                    ]}
+                    style={{
+                        display: 'inline-block',
+                        width: 'calc(50% - 6px)',
+                    }}
+                >
+                    <Input placeholder="first name" />
+                </Form.Item>
+                <Form.Item
+                    name="lastName"
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please input your last name!",
+                            whitespace: true
+                        }
+                    ]}
+                    style={{
+                        display: 'inline-block',
+                        width: 'calc(50% - 6px)',
+                        marginLeft: '12px'
+                        // margin: '0 8px',
+                    }}
+                >
+                    <Input placeholder="last name" />
+                </Form.Item>
             </Form.Item>
+            
             <Form.Item
                 name="email"
-                label="E-mail"
+                label="EMAIL"
                 rules={[
                     {
                         type: "email",
@@ -59,23 +98,34 @@ const RegisterCard = ({ redirect }) => {
                         message: "Please input your E-mail!"
                     }
                 ]}
+                style={{
+                    fontFamily: 'Alegreya Sans',
+                    fontWeight: 'bold',
+                    fontSize: '1rem',
+                }}
             >
-                <Input />
+                <Input placeholder="example@mail.com" />
             </Form.Item>
             <Form.Item
                 name="password"
-                label="Password"
+                label="PASSWORD"
                 rules={[
                     {
                         required: true,
                         message: "Please input your password!"
-                    }
+                    },
+                    { min: 8, message: 'Password must be minimum 8 characters.' },
                 ]}
                 hasFeedback
+                style={{
+                    fontFamily: 'Alegreya Sans',
+                    fontWeight: 'bold',
+                    fontSize: '1rem',
+                }}
             >
-                <Input.Password />
+                <Input.Password placeholder="at least 8 characters " />
             </Form.Item>
-            <Form.Item
+            {/* <Form.Item
                 name="rePassword"
                 label="Re-enter Password"
                 dependencies={["password"]}
@@ -99,7 +149,7 @@ const RegisterCard = ({ redirect }) => {
                 ]}
             >
                 <Input.Password />
-            </Form.Item>
+            </Form.Item> */}
 
             <Form.Item
                 name="agreement"
@@ -111,33 +161,40 @@ const RegisterCard = ({ redirect }) => {
                             : Promise.reject(new error("Should accept agreement"))
                     }
                 ]}
+                
             >
-                <Checkbox>
-                    I have read the <Link to={"/"}>agreement</Link>
+                <Checkbox  >
+                    I accept to the <Link to={"/"} style={{color: colorPrimary}}>Terms &  Conditions</Link>
                 </Checkbox>
             </Form.Item>
-            <Form.Item>
+
+            <Form.Item style={{width: '100%', display: 'flex', justifyContent: 'end'}}>
                 {isLoading ? (
                     <Button
-                        type="primary"
-                        className={styles.loginForm__button}
+                        // type="primary"
+                        // className={styles.loginForm__button}
+                        style={{backgroundColor: 'transparent', border: 'none'}}
+                        className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}
                         htmlType="submit"
                         loading
                     >
-                        Create your account
+                    <h3 className={ lightMode ? "buttonText" : "buttonTextDark"}>SIGN UP</h3>
                     </Button>
                 ) : (
                     <Button
-                        type="primary"
-                        className={styles.loginForm__button}
+                        // type="primary"
+                        // className={styles.loginForm__button}
+                        style={{backgroundColor: 'transparent', border: 'none'}}
+                        className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}
                         htmlType="submit"
                     >
-                        Create your account
+                        <h3 className={ lightMode ? "buttonText" : "buttonTextDark"}>SIGN UP</h3>
                     </Button>
                 )}
-                Already have an account?{" "}
-                <Link to={`/auth/login?redirect=${redirect}`}>Login</Link>
-                {!isError ? (
+                {/* Already have an account?{" "}
+                <Link to={`/auth/login?redirect=${redirect}`}>Login</Link> */}
+            </Form.Item>
+            {!isError ? (
                     <></>
                 ) : (
                     <div className={styles.loginForm__errorWrap}>
@@ -147,8 +204,8 @@ const RegisterCard = ({ redirect }) => {
                         </h3>
                         <p className={styles.loginForm__errorMessage}>{error.message}</p>
                     </div>
-                )}
-            </Form.Item>
+            )}
+            
         </Form>
     )
 }

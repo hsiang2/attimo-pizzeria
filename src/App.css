@@ -41,6 +41,30 @@
 .ant-segmented .ant-segmented-group {
   justify-content: space-between;
 }
+
+.ant-tabs-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 76px;
+  
+}
+.ant-tabs-tab {
+  width: 50%;
+  justify-content: center;
+}
+
+/* remove autocomplete input bg */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+
 /* General Styles */
 .bgMenu {
   min-width: 100%;
@@ -130,6 +154,26 @@
 .bgHeaderDark {
   background-color: #0A0806;
   box-shadow: 0 2px 12px 0 #2B2B2B26;
+}
+
+.bgAuth {
+  min-width: 100%;
+  min-height: 100%;
+
+  background-image: url("/images/bg_auth.png");
+  background-color: #F9EED9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgAuthDark {
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("/images/bg_auth_dark.png");
+  background-color: #100C09;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -291,6 +335,30 @@ button {
   font-size: 1.375rem;
 }
 
+.authCard {
+  background-image: url("/images/bg_auth_card.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 526px;
+  width: 348px;
+  margin: 9.8rem auto 6.6rem;
+  border-radius: 35px;
+  box-shadow: 3px 2px 10px #9C988D26;
+}
+
+.authCardDark {
+  background-image: url("/images/bg_auth_card_dark.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 526px;
+  width: 436px;
+  margin: 9.8rem auto 6.6rem;
+  border-radius: 35px;
+  box-shadow: 3px 2px 10px #706C6426;
+}
+
 
 /* RWD Container */
 @media (min-width: 576px) {
@@ -331,6 +399,13 @@ button {
   }
   .bgProductContentDark {
     background-image: url("https://github.com/hsiang2/movie_image/blob/main/bg_product_content_md_dark.png?raw=true");
+  }
+
+  .authCard {
+    width: 436px
+  }
+  .authCardDark {
+    width: 436px
   }
 }
 

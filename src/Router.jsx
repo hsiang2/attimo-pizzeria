@@ -16,6 +16,7 @@ import ProfilePage from './pages/ProfilePage'
 import PlaceOrderPage from './pages/PlaceOrderPage'
 import PaymentPage from './pages/PaymentPage'
 import ShippingPage from './pages/ShippingPage'
+import AuthPage from './pages/AuthPage'
 
 
 const Router = () => {
@@ -31,11 +32,13 @@ const Router = () => {
                             <Route path='category/:categoryName' element={<MenuPage />} />
                             <Route path='id/:productId' element={<ProductPage />} />
                         </Route>
-                        <Route path='auth'>
+                        <Route path='auth' element={<AuthPage />} />
+                        <Route path='auth/profile' element={<ProfilePage />} />
+                        {/* <Route path='auth'>
                             <Route path='login' element={<LoginPage />} />
                             <Route path='register' element={<RegisterPage />} />
                             <Route path='profile' element={<ProfilePage />} />
-                        </Route>
+                        </Route> */}
                         <Route path='shopping'>
                             <Route path='shipping' element={<ShippingPage />} />
                             <Route path='payment' element={<PaymentPage />} />

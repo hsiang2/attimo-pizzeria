@@ -16,6 +16,17 @@ const darkTheme = {
     Breadcrumb: {
       colorText: "#FBBF84",
       colorTextDescription: "#A99F94B3"
+    },
+    Tabs: {
+      colorBorderSecondary: "#B8B8B84D"
+    },
+    Input: {
+      colorBorder: "#B8B8B84D",
+      colorBgContainer: "transparent"
+    },
+    Checkbox: {
+      colorBorder: "#FEF6E0",
+      colorBgContainer: "transparent"
     }
   },
 };
@@ -35,6 +46,18 @@ const lightTheme = {
     Breadcrumb: {
       colorText: "#C57D01",
       colorTextDescription: "#B1865866"
+    },
+    Tabs: {
+      colorBorderSecondary: "#00000016"
+    },
+    Input: {
+      colorBorder: "#AFAFAF",
+      colorBgContainer: "transparent",
+      colorInfoBgHover: "transparent"
+    },
+    Checkbox: {
+      colorBorder: "#323D14",
+      colorBgContainer: "transparent"
     }
   },
 };

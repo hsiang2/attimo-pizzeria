@@ -9,7 +9,7 @@ import Orders from "../components/Orders"
 const ProfilePage = () => {
     const lightMode = useSelector(selectLightMode)
     return(
-        <div className={`mainLayout ${lightMode ? 'bgHome' : 'bgHomeDark'} `}>
+        <div className={`mainLayout ${lightMode ? 'bgAuth' : 'bgAuthDark'} `}>
             <Helmet><title>Attimo Pizzeria | Profile</title></Helmet>
             <div className="layoutHeader fullWidth" >
                 <Header />
