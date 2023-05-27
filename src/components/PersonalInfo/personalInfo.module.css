@@ -1,0 +1,27 @@
+.profileForm {
+    /* padding: 1rem; */
+    margin: 9.8rem auto 4.4rem;
+    max-width: 22.5rem;
+}
+  
+  .button {
+    width: 7rem;
+    height: 2.375rem;
+  }
+  
+  @media (min-width: 768px) {
+    .profileForm {
+      max-width: 48rem;
+    }
+  
+    .button {
+      width: 8.75rem;
+      height: 2.375rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .profileForm {
+      max-width: 71.8rem;
+    }
+  }
