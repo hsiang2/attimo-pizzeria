@@ -85,7 +85,7 @@ export const register = async ({ firstName, lastName, email, password })  => {
     localStorage.setItem("user", JSON.stringify(user))
     const docRef = doc(db, "users", user.uid)
     await setDoc(docRef, {
-        firstName, lastName
+        firstName, lastName, adrs: [""]
     })
 
 }
@@ -108,12 +108,17 @@ export const getUserInfo = async () => {
     }
 }
 
-export const updateUserInfo = async ({ name, adrs, tel, uid }) => {
+export const updateUserInfo = async ({ firstName, lastName, adrs, phone, birth, uid }) => {
     const docRef = doc(db, "users", uid)
+    adrs = adrs === undefined ? null : adrs
+    phone = phone === undefined ? null: phone 
+    birth = birth === undefined ? null : birth
     await updateDoc(docRef, {
-        name,
+        firstName,
+        lastName,
         adrs,
-        tel
+        phone,
+        birth
     })
     const user = auth.currentUser
     localStorage.setItem("user", JSON.stringify(user))

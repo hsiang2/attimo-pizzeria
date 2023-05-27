@@ -24,6 +24,10 @@ const darkTheme = {
       colorBorder: "#B8B8B84D",
       colorBgContainer: "transparent"
     },
+    DatePicker: {
+      colorBorder: "#B8B8B84D",
+      colorBgContainer: "transparent"
+    },
     Checkbox: {
       colorBorder: "#FEF6E0",
       colorBgContainer: "transparent"
@@ -51,6 +55,11 @@ const lightTheme = {
       colorBorderSecondary: "#00000016"
     },
     Input: {
+      colorBorder: "#AFAFAF",
+      colorBgContainer: "transparent",
+      colorInfoBgHover: "transparent"
+    },
+    DatePicker: {
       colorBorder: "#AFAFAF",
       colorBgContainer: "transparent",
       colorInfoBgHover: "transparent"

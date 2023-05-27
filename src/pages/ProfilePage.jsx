@@ -16,7 +16,7 @@ const ProfilePage = () => {
             </div>
             <div className="layoutContent container">
                 <ProfileCard />
-                <Orders />
+                {/* <Orders /> */}
             </div>
             <Footer className="layoutFooter" />
         </div>

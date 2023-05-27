@@ -359,6 +359,24 @@ button {
   box-shadow: 3px 2px 10px #706C6426;
 }
 
+/* Checkout Steps */
+.checkout-steps {
+  font-size: 0.6rem;
+  width: 80%;
+  max-width: 62rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+.checkout-steps > div {
+  border-top: 0.3rem #A1A1A1 solid;
+  flex: 1;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #CD6B33;
+  color: #CD6B33;
+}
 
 /* RWD Container */
 @media (min-width: 576px) {

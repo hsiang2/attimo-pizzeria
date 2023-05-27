@@ -1,105 +1,94 @@
 import { useNavigate } from "react-router-dom"
 import { useLogout, useUpdateProfile, useUserInfo } from "../../react-query"
-import { Button, Form, Input } from "antd"
-import { useEffect } from "react"
-
+import { Button, Form, Input, Menu } from "antd"
+import { useEffect, useState } from "react"
+import { Icon } from "@iconify/react"
+import { useSelector } from "react-redux"
+import { selectLightMode } from "../../redux/colorSlice"
 import styles from "./profileCard.module.css"
+import PersonalInfo from "../PersonalInfo"
 
 const ProfileCard = ({ redirect }) => {
-    const { data: userInfo } = useUserInfo() || {}
-    const update = useUpdateProfile()
     const logout = useLogout()
     const navigate = useNavigate()
-    const [form] = Form.useForm()
-
-    const onUpdate = async (values) => {
-        console.log("Received update info: ", values)
-        update.mutate({ ...values, uid: userInfo.uid })
-    }
+    const lightMode = useSelector(selectLightMode)
 
     const onLogout = () => {
         logout.mutate()
         navigate("/")
     }
 
-    useEffect(() => {
-        form.setFieldsValue(userInfo)
-    }, [userInfo])
+    const [selectedMenuItem, setSelectedMenuItem]= useState('personalInfo');
 
-    return (
-        <Form
-            // style={{marginTop: "10rem"}}
-            onFinish={onUpdate}
-            name="normal_login"
-            className={styles.profileForm}
-            form={form}
-            initialValues={userInfo}
-        >
-            <Form.Item
-                label="Name: "
-                name="name"
-                rules={[
-                    {
-                        type: "string",
-                        message: "The input is not valid name!"
-                    },
-                    {
-                        message: "Please input your name!"
+    const componentsSwtich = (key) => {
+    switch (key) {
+    case 'personalInfo':
+        return (<PersonalInfo />);
+    case 'orderHistory':
+        return (<h1>orderHistory</h1>);
+    case 'payment':
+        return (<h3>payment</h3>);
+    case 'giftCard':
+        return (<h3>giftCard</h3>);
+    default:
+        break;
+    }
+    };
+
+    return(
+        <div className={lightMode ? styles.profileForm: styles.profileFormDark}>
+            <Menu 
+                selectedKeys={selectedMenuItem}
+                mode="inline"
+                onClick={(e) => {
+                        if (e.key === 'logout') {
+                            onLogout()
+                        } else setSelectedMenuItem(e.key)
                     }
-                ]}
+                }
+                className={styles.menu}
+                style={{border: 'none'}}
+                // style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}
             >
-                <Input placeholder={userInfo.name} />
-            </Form.Item>
-            <Form.Item
-                label="Address: "
-                name="adrs"
-                rules={[
-                    {
-                        type: "string",
-                        message: "The input is not valid address!"
-                    }, 
-                    {
-                        message: "Please input your address!"
-                    }
-                ]}
-            >
-                <Input placeholder={userInfo?.adrs || ""} />
-            </Form.Item>
-            <Form.Item
-                label="Phone: "
-                name="tel"
-                rules={[
-                  {
-                    type: "string",
-                    message: "The input is not valid phone!",
-                  },
-                  {
-                    message: "Please input your phone!",
-                  },
-                ]}
-            >
-                <Input placeholder={userInfo?.tel || 'xxxx-xxxxxx'} />
-            </Form.Item>
-            <Form.Item>
-                <Button
-                    type="primary"
-                    htmlType="submit"
-                    className={styles.profileForm__button}
+
+                <Menu.Item key="personalInfo" >
+                    <div className={styles.menuItem}>
+                        <Icon style={{fontSize: '1.125rem'}} icon="fluent:calendar-person-20-regular"/>
+                        <h3 className={styles.menuText}>Personal Info</h3>
+                    </div>
+                </Menu.Item>
+                <Menu.Item key="orderHistory">
+                    <div className={styles.menuItem}>
+                        <Icon style={{fontSize: '1.125rem'}} icon="solar:history-linear"/>
+                        <h3 className={styles.menuText}>Order History</h3>
+                    </div>
+                </Menu.Item>
+                <Menu.Item key="payment">
+                    <div className={styles.menuItem}>
+                        <Icon style={{fontSize: '1.125rem'}} icon="fluent:payment-28-regular"/>
+                        <h3 className={styles.menuText}>Payment</h3>
+                    </div>
+                </Menu.Item>
+                <Menu.Item key="giftCard">
+                    <div className={styles.menuItem}>
+                        <Icon style={{fontSize: '1.125rem'}} icon="fluent:gift-20-regular"/>
+                        <h3 className={styles.menuText}>Gift Card</h3>
+                    </div>
+                </Menu.Item>
+                <Menu.Item key="logout" 
+                    style={{position: 'absolute', bottom: '3rem'}}
                 >
-                    Submit
-                </Button>
-                <Button
-                    type="primary"
-                    danger
-                    style={{ marginTop: "1rem" }}
-                    className={styles.profileForm__button}
-                    onClick={onLogout}
-                >
-                    Log out
-                </Button>
-            </Form.Item>
-        </Form>
+                    <div className={styles.menuItem}>
+                        <Icon style={{fontSize: '1.125rem'}} icon="solar:logout-2-outline"/>
+                        <h3 className={styles.menuText}>SIGN OUT</h3>
+                    </div>
+                </Menu.Item>
+            </Menu>
+
+            {componentsSwtich(selectedMenuItem)}
+        </div>
     )
+
 }
 
 export default ProfileCard

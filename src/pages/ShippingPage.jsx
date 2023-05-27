@@ -8,7 +8,7 @@ import { selectLightMode } from "../redux/colorSlice"
 const ShippingPage = () => {
     const lightMode = useSelector(selectLightMode)
     return (
-        <div className={`mainLayout ${lightMode ? 'bgHome' : 'bgHomeDark'} `}>
+        <div className={`mainLayout ${lightMode ? 'bgAuth' : 'bgAuthDark'} `}>
             {/* <Helmet><title>Attimo Pizzeria </title></Helmet> */}
             <div className="layoutHeader fullWidth" >
                 <Header />
