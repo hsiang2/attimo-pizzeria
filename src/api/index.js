@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "firebase/app"
-import { collection, deleteDoc, getDocs, getFirestore, query, setDoc, where, doc, getDoc, initializeFirestore, updateDoc } from "firebase/firestore"
+import { collection, deleteDoc, getDocs, getFirestore, query, setDoc, where, doc, getDoc, initializeFirestore, updateDoc, arrayUnion } from "firebase/firestore"
 import { createUserWithEmailAndPassword, getAuth, initializeAuth, signInWithEmailAndPassword } from "firebase/auth"
 import products from "../json/products.json"
 
@@ -120,6 +120,26 @@ export const updateUserInfo = async ({ firstName, lastName, adrs, phone, birth, 
         phone,
         birth
     })
+    const user = auth.currentUser
+    localStorage.setItem("user", JSON.stringify(user))
+}
+
+//save address in shipping page
+export const addAdrs = async ({ adrs, uid }) => {
+    const docRef = doc(db, "users", uid)
+
+    const docSnap = await getDoc(docRef)
+    const userDoc = docSnap.data()
+    if(userDoc.adrs?.[0] !== "") {
+        await updateDoc(docRef, {
+            adrs: arrayUnion(adrs)
+        })
+    } else {
+        await updateDoc(docRef, {
+            adrs: [adrs]
+        })
+    }
+
     const user = auth.currentUser
     localStorage.setItem("user", JSON.stringify(user))
 }

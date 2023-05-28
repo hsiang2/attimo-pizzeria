@@ -65,6 +65,7 @@ const PersonalInfo = ({ redirect }) => {
                                         message: "The input is not valid name!"
                                     },
                                     {
+                                        required: true,
                                         message: "Please input your first name!"
                                     }
                                 ]}
@@ -85,6 +86,7 @@ const PersonalInfo = ({ redirect }) => {
                                         message: "The input is not valid name!"
                                     },
                                     {
+                                        required: true,
                                         message: "Please input your last name!"
                                     }
                                 ]}

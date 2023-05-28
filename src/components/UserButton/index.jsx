@@ -8,11 +8,11 @@ const UserButton = () => {
     const {
         token: { colorPrimary },
       } = theme.useToken();
-    const { data: userInfo } = useUserInfo()
+    const { data: userInfo } = useUserInfo() || {}
     const navigate = useNavigate()
 
     const goToProfile = () => {
-        if(userInfo?.name)
+        if(userInfo?.uid)
             navigate("/auth/profile")
         else 
             navigate("/auth?redirect=/auth/profile")

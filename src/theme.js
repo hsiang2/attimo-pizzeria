@@ -24,6 +24,10 @@ const darkTheme = {
       colorBorder: "#B8B8B84D",
       colorBgContainer: "transparent"
     },
+    Select: {
+      colorBorder: "#B8B8B84D",
+      colorBgContainer: "transparent"
+    },
     DatePicker: {
       colorBorder: "#B8B8B84D",
       colorBgContainer: "transparent"
@@ -55,6 +59,11 @@ const lightTheme = {
       colorBorderSecondary: "#00000016"
     },
     Input: {
+      colorBorder: "#AFAFAF",
+      colorBgContainer: "transparent",
+      colorInfoBgHover: "transparent"
+    },
+    Select: {
       colorBorder: "#AFAFAF",
       colorBgContainer: "transparent",
       colorInfoBgHover: "transparent"

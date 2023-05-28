@@ -32,7 +32,7 @@ const Router = () => {
                             <Route path='category/:categoryName' element={<MenuPage />} />
                             <Route path='id/:productId' element={<ProductPage />} />
                         </Route>
-                        <Route path='auth' element={<AuthPage />} />
+                        <Route path='auth' exact element={<AuthPage />} />
                         <Route path='auth/profile' element={<ProfilePage />} />
                         {/* <Route path='auth'>
                             <Route path='login' element={<LoginPage />} />

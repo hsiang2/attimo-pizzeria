@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
-import { addOrder, getMyOrders, getProductById, getProducts, getProductsByCategory, getUserInfo, login, logout, register, updateUserInfo } from "../api"
+import { addAdrs, addOrder, getMyOrders, getProductById, getProducts, getProductsByCategory, getUserInfo, login, logout, register, updateUserInfo } from "../api"
 
 export const useProducts = () => {
     const { data, isLoading } = useQuery([], getProducts)
@@ -46,6 +46,15 @@ export const useRegisterWithEmailPassword = () => {
 export const useUpdateProfile = () => {
     const queryClient = useQueryClient()
     return useMutation(updateUserInfo, {
+        onSuccess: () => {
+            queryClient.invalidateQueries(["uid"])
+        }
+    })
+}
+
+export const useAddAdrs = () => {
+    const queryClient = useQueryClient()
+    return useMutation(addAdrs, {
         onSuccess: () => {
             queryClient.invalidateQueries(["uid"])
         }

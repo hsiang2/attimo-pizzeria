@@ -37,7 +37,7 @@ const Cart = () => {
 
      const checkoutHandler = ()  => {
         onClose()
-        if(userInfo?.name)
+        if(userInfo?.uid)
             navigate("/shopping/shipping")
         else 
             navigate("/auth?redirect=/shopping/shipping")
@@ -179,7 +179,7 @@ const Cart = () => {
                             </div>
                         </div>
                         <button onClick={checkoutHandler} className={`${lightMode ? 'customButton' : 'customButtonDark'} ${styles.button}`}>
-                            <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>ORDER NOW</h4>
+                            <h4 className={ lightMode ? "buttonText" : "buttonTextDark"}>CHECK OUT</h4>
                         </button>
                     </>
                 )}      
