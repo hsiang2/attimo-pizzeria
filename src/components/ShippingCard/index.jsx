@@ -60,7 +60,7 @@ const ShippingCard = () => {
         if(JSON.stringify(shippingAddress) === '{}') {
             form.setFieldsValue(userInfo)
         } else {
-            form.getFieldValue(shippingAddress)
+            form.setFieldValue(shippingAddress)
         }
     }, [userInfo, shippingAddress])
     
@@ -74,7 +74,7 @@ const ShippingCard = () => {
                     className={styles.shippingForm}
 
 
-                    initialValues={userInfo}
+                    initialValues={JSON.stringify(shippingAddress) === '{}' ? userInfo : shippingAddress}
 
 
                     form={form}

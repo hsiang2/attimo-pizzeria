@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async"
 import ProfileCard from "../components/ProfileCard"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Orders from "../components/Orders"
 
 const ProfilePage = () => {
     const lightMode = useSelector(selectLightMode)
@@ -16,7 +15,6 @@ const ProfilePage = () => {
             </div>
             <div className="layoutContent container">
                 <ProfileCard />
-                {/* <Orders /> */}
             </div>
             <Footer className="layoutFooter" />
         </div>

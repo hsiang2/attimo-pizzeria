@@ -1,12 +1,10 @@
 import { useSelector } from "react-redux"
-import CheckoutSteps from "../components/CheckoutSteps"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { selectLightMode } from "../redux/colorSlice"
-import PaymentCard from "../components/PaymentCard"
-import PlaceOrderCard from "../components/PlaceOrderCard"
+import SuccessCard from "../components/SuccessCard"
 
-const PlaceOrderPage = () => {
+const SuccessPage = () => {
     const lightMode = useSelector(selectLightMode)
     return (
         <div className={`mainLayout ${lightMode ? 'bgAuth' : 'bgAuthDark'} `}>
@@ -16,12 +14,11 @@ const PlaceOrderPage = () => {
             </div>
             
             <div className="layoutContent container">
-                <CheckoutSteps step1 step2 step3 step4 />
-                <PlaceOrderCard />
+               <SuccessCard />
             </div>
             <Footer className="layoutFooter" />
         </div>
     )
 }
 
-export default PlaceOrderPage
+export default SuccessPage

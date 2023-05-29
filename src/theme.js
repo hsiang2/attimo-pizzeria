@@ -35,7 +35,14 @@ const darkTheme = {
     Checkbox: {
       colorBorder: "#FEF6E0",
       colorBgContainer: "transparent"
+    },
+    Menu: {
+      colorItemText: "#67605E",
+      colorItemTextSelected: "#DDCAC2",
+      colorItemTextHover: "#DDCAC2",
+      colorItemBgSelected: "#8E8E8E57"
     }
+    
   },
 };
 
@@ -76,6 +83,12 @@ const lightTheme = {
     Checkbox: {
       colorBorder: "#323D14",
       colorBgContainer: "transparent"
+    }, 
+    Menu: {
+      colorItemText: "#9A8982",
+      colorItemTextSelected: "#6E4230",
+      colorItemTextHover: "#6E4230",
+      colorItemBgSelected: "#E7E2D157"
     }
   },
 };

@@ -17,6 +17,7 @@ import PlaceOrderPage from './pages/PlaceOrderPage'
 import PaymentPage from './pages/PaymentPage'
 import ShippingPage from './pages/ShippingPage'
 import AuthPage from './pages/AuthPage'
+import SuccessPage from './pages/SuccessPage'
 
 
 const Router = () => {
@@ -43,6 +44,7 @@ const Router = () => {
                             <Route path='shipping' element={<ShippingPage />} />
                             <Route path='payment' element={<PaymentPage />} />
                             <Route path='placeorder' element={<PlaceOrderPage />} />
+                            <Route path='success' element={<SuccessPage />} />
                         </Route>
                         <Route path='contact' element={<ContactPage />}/>
                         <Route path='ourstory' element={<OurStoryPage />}/>

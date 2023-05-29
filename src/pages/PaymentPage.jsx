@@ -8,7 +8,7 @@ import PaymentCard from "../components/PaymentCard"
 const PaymentPage = () => {
     const lightMode = useSelector(selectLightMode)
     return (
-        <div className={`mainLayout ${lightMode ? 'bgHome' : 'bgHomeDark'} `}>
+        <div className={`mainLayout ${lightMode ? 'bgAuth' : 'bgAuthDark'}  `}>
             {/* <Helmet><title>Attimo Pizzeria </title></Helmet> */}
             <div className="layoutHeader fullWidth" >
                 <Header />

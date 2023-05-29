@@ -1,4 +1,4 @@
-.paymentForm {
+/* .paymentForm {
    max-width: 40rem;
    padding: 1rem;
    margin-left: auto;
@@ -8,4 +8,200 @@
  .paymentForm__button {
     width: 100%;
   }
+   */
+   .bg {
+    font-family: Alegreya Sans;
+    /* padding: 1rem; */
+    /* margin: 9.8rem auto 4.4rem; */
+    margin: 0 auto;
+    width: 21.9rem;
+    min-height: 47.4rem;
+  
+    padding: 3.25rem 2.125rem 3.875rem;
+  
+    background-image: url("/images/bg_checkout_card.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+    /* box-shadow: 3px 2px 10px #9C988D26; */
+  }
+  
+  .bgDark {
+  composes: bg;
+  background-image: url("/images/bg_checkout_card_dark.png");
+  box-shadow: 3px 2px 10px #706C6426;
+  }
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+   
+    gap: 1.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5.6rem;
+    max-width: 18rem;
+  }
+  /* .paymentForm {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 18rem;
+  } */
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    
+  }
+  
+  .button {
+    margin-top: 3rem;
+    margin-bottom: 8.75rem;
+    width: 8.75rem;
+    height: 2.8rem;
+  
+  }
+  
+  .btnContainer {
+    display: flex; 
+    justify-content: space-between;
+    width: 21.9rem;
+    margin: auto;
+  }
+
+  .optionWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.option {
+  display: flex;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  border: 1.5px solid #A0A0A0;
+  opacity: 0.4;
+
+  
+}
+
+.optionActive {
+  composes: option;
+  border-color: #E7A58199;
+  opacity: 1;
+
+  background-image: url("/images/bg_checkout_card.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px; 
+  padding: 1.5px; 
+  border: 1.5px solid #9F9F9F;
+
+  margin-top: 3rem;
+  margin-bottom: 8.75rem;
+  width: 8.75rem;
+  height: 2.8rem;
+}
+
+.customButton:hover {
+  border-color: #9F9F9F;
+  background-color: #9F9F9F;
+}
+
+.buttonText {
+  margin: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #9F9F9F;
+}
+.customButton:hover > .buttonText {
+  color: #F9EED9;
+}
+  
+  @media (min-width: 768px) {
+    .bg {
+      width: 45rem;
+      min-height: 36rem;
+      padding: 3.25rem 3.625rem 3.875rem;
+    }
+    .btnContainer {
+      width: 45rem;
+    }
+    .title {
+      font-size: 2.25rem;
+    }
+    /* .paymentForm {
+      max-width: 20.3rem;
+    } */
+  
+    .button {
+      margin-bottom: 6.25rem;
+      height: 2.375rem;
+      }
+
+      .customButton {
+        margin-bottom: 6.25rem;
+      height: 2.375rem;
+      }
+
+      .formWrapper {
+        max-width: 33.68rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .optionWrapper {
+        flex-direction: column;
+        /* gap: 1.3rem; */
+      }
+
+      .option {
+        align-items: center;
+        flex-direction: row;
+        gap: 0.4rem;
+        width: 9.56rem;
+        height: 4.8rem;
+        padding: 1.3rem;
+        font-size: 1rem;
+      }
+    
+  }
+  /* .form {
+    width: 29.28rem;
+  } */
+  
+@media (min-width: 992px) {
+  .bg {
+    width: 60rem;
+    padding: 3.25rem 4rem 3.875rem;
+  }
+  .btnContainer {
+    width: 60rem;
+  }
+  /* .form {
+    width: 44.56rem;
+  } */
+  /* .paymentForm {
+    max-width: 31.3rem;
+  } */
+  .formWrapper {
+    max-width: 45.8rem;
+  }
+  
+}
+   
   
