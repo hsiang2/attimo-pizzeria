@@ -77,7 +77,7 @@ const PlaceOrderCard = () => {
     return (
         <>
             <div className={lightMode ? styles.bg : styles.bgDark}>
-                <h1 className={styles.title} style={{color: colorTextBase}}>Personal Details</h1>
+                <h1 className={styles.title} style={{color: colorTextBase}}>Order Confirmation</h1>
                 <div className={styles.layout}>
                     <div>
                         <h3 style={{color: colorTextBase}} className={styles.subTitle}>

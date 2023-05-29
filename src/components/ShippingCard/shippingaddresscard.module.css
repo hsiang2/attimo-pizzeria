@@ -32,7 +32,7 @@ box-shadow: 3px 2px 10px #706C6426;
 .title {
   font-size: 1.75rem;
   font-weight: 500;
-  
+  text-shadow: 2px 2px 4px #D1D8BF;
 }
 
 .button {

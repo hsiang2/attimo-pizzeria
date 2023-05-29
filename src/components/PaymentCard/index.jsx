@@ -58,7 +58,7 @@ const PaymentCard = () => {
     return(
         <>
             <div className={lightMode ? styles.bg : styles.bgDark}>
-                <h1 className={styles.title} style={{color: colorTextBase}}>Personal Details</h1>
+                <h1 className={styles.title} style={{color: colorTextBase}}>Payment Method</h1>
                 <div className={styles.formWrapper}>
                     <div className={styles.optionWrapper}>
                         <div className={styles.optionActive} style={{color: colorTextBase}}>

@@ -52,7 +52,7 @@
   .title {
     font-size: 1.75rem;
     font-weight: 500;
-    
+    text-shadow: 2px 2px 4px #D1D8BF;
   }
   
   .button {

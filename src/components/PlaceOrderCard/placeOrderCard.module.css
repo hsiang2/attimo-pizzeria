@@ -31,6 +31,7 @@ p {
     border-radius: 19px;
     width: 19.8rem;
     padding: 0.7rem;
+    margin: -1rem;
   }
   /* .shippingForm {
     margin-left: auto;
@@ -43,6 +44,7 @@ p {
     font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 3.25rem;
+    text-shadow: 2px 2px 4px #D1D8BF;
   }
   
   .button {

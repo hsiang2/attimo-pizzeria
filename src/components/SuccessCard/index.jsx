@@ -19,7 +19,7 @@ const SuccessCard = () => {
             <div className={lightMode ? styles.bg : styles.bgDark}>
                 <div className={styles.wrapper}>
                     <img src="/images/img_success.png" width='236px' />
-                    <h1 className={styles.title} style={{color: colorTextBase}}>Personal Details</h1>
+                    <h1 className={styles.title} style={{color: colorTextBase}}>Thanks For Your Order!</h1>
                     <p style={{textAlign: 'center', color: lightMode ? "#878787": "#9E9E9E"}}>
                         Your order has been completed and we will prepare it for you as soon as possible
                     </p>
