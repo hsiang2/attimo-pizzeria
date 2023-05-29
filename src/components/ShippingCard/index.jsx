@@ -125,6 +125,7 @@ const ShippingCard = () => {
                                             message: "Please input your last name!"
                                         }
                                     ]}
+                                    hasFeedback
                                 >
                                     <Input placeholder={userInfo.lastName} />
                             </Form.Item>
@@ -174,6 +175,7 @@ const ShippingCard = () => {
                                     message: "Please input your phone!",
                                 },
                                 ]}
+                                hasFeedback
                             >
                                 <Input placeholder={userInfo?.phone || ''} />
                             </Form.Item>
@@ -235,6 +237,7 @@ const ShippingCard = () => {
                                             message: "Please input address!",
                                             },
                                         ]}
+                                        hasFeedback
                                     >
                                         <Input placeholder="Create a new address" />
                                     </Form.Item>

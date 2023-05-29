@@ -80,7 +80,7 @@ const lightTheme = {
     },
     Form: {
       colorError: "#AB3421",
-      colorSuccess: "#688123",
+      colorSuccess: "#323D14",
     },
     Select: {
       colorBorder: "#AFAFAF",
