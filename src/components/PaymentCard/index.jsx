@@ -62,15 +62,15 @@ const PaymentCard = () => {
                 <div className={styles.formWrapper}>
                     <div className={styles.optionWrapper}>
                         <div className={styles.optionActive} style={{color: colorTextBase}}>
-                            <img src="/images/icon_credit_card.png" width='24px' />
+                            <img src={lightMode ? "/images/icon_credit_card.png" : "/images/icon_credit_card_dark.png"} width='24px' />
                             Credit Card
                         </div>
                         <div className={styles.option} style={{color: colorTextBase}}>
-                            <img src="/images/icon_paypal.png" width='24px' />
+                            <img src={lightMode ? "/images/icon_paypal.png" : "/images/icon_paypal_dark.png"} width='24px' />
                             PayPal
                         </div>
                         <div className={styles.option} style={{color: colorTextBase}}> 
-                            <img src="/images/icon_bank.png" width='24px' />
+                            <img src={lightMode ? "/images/icon_bank.png" : "/images/icon_bank_dark.png"} width='24px' />
                             Net Banking
                         </div>
                     </div>
