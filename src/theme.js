@@ -22,7 +22,7 @@ const darkTheme = {
     },
     Input: {
       colorBorder: "#B8B8B84D",
-      colorBgContainer: "transparent"
+      colorBgContainer: "transparent",
     },
     Select: {
       colorBorder: "#B8B8B84D",
@@ -41,8 +41,11 @@ const darkTheme = {
       colorItemTextSelected: "#DDCAC2",
       colorItemTextHover: "#DDCAC2",
       colorItemBgSelected: "#8E8E8E57"
-    }
-    
+    },
+    Form: {
+      // colorError: "#E35741",
+      colorSuccess: "#85A333"
+    },
   },
 };
 
@@ -68,7 +71,16 @@ const lightTheme = {
     Input: {
       colorBorder: "#AFAFAF",
       colorBgContainer: "transparent",
-      colorInfoBgHover: "transparent"
+      colorInfoBgHover: "transparent",
+
+      colorError: "#AB3421",
+      colorErrorBorderHover: "#AB3421",
+
+
+    },
+    Form: {
+      colorError: "#AB3421",
+      colorSuccess: "#688123",
     },
     Select: {
       colorBorder: "#AFAFAF",
@@ -89,7 +101,7 @@ const lightTheme = {
       colorItemTextSelected: "#6E4230",
       colorItemTextHover: "#6E4230",
       colorItemBgSelected: "#E7E2D157"
-    }
+    },
   },
 };
 

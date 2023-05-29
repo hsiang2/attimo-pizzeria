@@ -40,7 +40,7 @@ const PlaceOrderCard = () => {
         // })
         mutate({
             firstName: shippingAddress.firstName,
-            firstName: shippingAddress.lastName,
+            lastName: shippingAddress.lastName,
             email: shippingAddress.email,
             phone: shippingAddress.phone,
             address: shippingAddress.address === 'other' ?

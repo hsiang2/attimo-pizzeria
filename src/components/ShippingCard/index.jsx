@@ -232,6 +232,7 @@ const ShippingCard = () => {
                                         rules={[
                                             {
                                             required: true,
+                                            message: "Please input address!",
                                             },
                                         ]}
                                     >
