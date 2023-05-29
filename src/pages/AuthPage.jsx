@@ -32,7 +32,7 @@ const AuthPage = () => {
                 <Header />
             </div>
             <div className="layoutContent container">
-                <div className={lightMode ? 'authCard' : 'authCardDark'}>
+                <div className={lightMode ? 'authCard' : 'authCardDark'} >
                     <Tabs
                         defaultActiveKey="1"
                         centered
