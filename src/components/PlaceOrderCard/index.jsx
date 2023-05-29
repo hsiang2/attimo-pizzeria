@@ -133,9 +133,9 @@ const PlaceOrderCard = () => {
                         
                             cartItems.map(item => (
                                 <li key={item.id} className={styles.item}>
-                                    <Link to={`/menu/id/${item.productId}?cartId=${item.id}`} onClick={() => setOpen(false)}>
+                                    {/* <Link to={`/menu/id/${item.productId}?cartId=${item.id}`} onClick={() => setOpen(false)}> */}
                                         <img className={styles.image} src={item.image} alt={item.name} />
-                                    </Link>
+                                    {/* </Link> */}
                                     <div className={styles.content}>
                                         <div className={styles.name} style={{color: colorTextBase}}>{item.name}</div>
                                         <div className={styles.custom}>
