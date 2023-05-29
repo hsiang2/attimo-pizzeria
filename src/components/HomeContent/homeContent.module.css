@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 11.375rem 0 23rem 1.375rem;
+    margin: 19.375rem 0 23rem 1.375rem;
+    /* position: sticky; */
 }
 
 .mainTitle {
@@ -32,6 +33,8 @@
 
 .story {
     margin-bottom: 6.5rem;
+    /* margin-top: 800px;
+    */
 }
 
 .storyContent {
@@ -80,8 +83,12 @@
 }
 
 @media (min-width: 768px) {
+    /* .bgHeader {
+        background-image: url("/public/images/bg_home_header_md.png");
+    } */
     .banner {
         margin: 10.5rem 0 30rem;
+        /* position: fixed; */
     }
 
     .bannerImage {
@@ -105,6 +112,7 @@
     }
 
     .ingredients {
+        /* grid-template-areas: "ingredientsContent image"; */
         display: flex;
         justify-content: end;
     }
@@ -133,11 +141,16 @@
 }
   
 @media (min-width: 992px) {
+    /* .bgHeader {
+        background-image: url("/public/images/bg_home_header_lg.png");
+    } */
     .banner {
         margin: 9.8rem 0 19rem;
+        
     }
     .bannerImage {
         width: 35.625rem;
+        
     }
 
     .storyContent {
