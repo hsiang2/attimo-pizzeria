@@ -6,4 +6,4 @@
 React RWD dynamic ordering website featuring a homepage, Menu, and Shopping Cart. Customers can customize their orders. Built with Redux for state management and styled with Ant Design, it supports light and dark mode.
 
 ## Demo
-[Demo Link](attimo-pizzeria.vercel.app)
+[Demo Link](https://attimo-pizzeria.vercel.app)
